@@ -1,11 +1,16 @@
- HELLO 
- blurps
- groumph
- Grrrr !!!!!
- 
+ HEnhjifhjighjLLO 
+jnh kngrobbgjbfjnumph
+bhjbhgnhjbhnjnh
+
+
+
+
  .()_()
  (='.'=)
  (")_(")
  
 
-yes
+
+LEs gens essaient d'éviter les merge et là on va en provoquer un (ou plusieurs ^^)!!
+
+
