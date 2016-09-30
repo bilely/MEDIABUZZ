@@ -12,7 +12,7 @@ petit lapinnnnnn
 
 <<<<<<< HEAD
 
-LEs gens essaient d'éviter les merge et là on va en provoquer un (ou plusieurs ^^)!!
+sdqslmsdlmfslmflmqsflmlqfsmqlmqflmfmLEs gens essaient d'éviter les merge et là on va en provoquer un (ou plusieurs ^^)!!
 
 
 =======
