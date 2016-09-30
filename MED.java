@@ -7,13 +7,12 @@ petit lapinnnnnn
 
  .()_()
  (='.'=)
- (")_(")
  
 
 <<<<<<< HEAD
 
 sdqslmsdlmfslmflmqsflmlqfsmqlmqflmfmLEs gens essaient d'éviter les merge et là on va en provoquer un (ou plusieurs ^^)!!
-dqsdfsqfqfq
+
 
 =======
 oi
