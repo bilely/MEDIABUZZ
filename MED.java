@@ -2,7 +2,7 @@
 
 
 
-Bonjour pedsfsfstit lapinnnnnn
+Bonjour pedsfsfstitien
 
  .()_()
  (='.'=)Je tue le lapin
@@ -24,7 +24,7 @@ toto toto toto
 
 
 
-Bonjour petit lapinnnnnn
+Hello petit lapinnnnnn
 
  .()_()
  (='.'=)
