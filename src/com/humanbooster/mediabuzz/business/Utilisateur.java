@@ -9,6 +9,6 @@ public class Utilisateur {
 	String mail;
 	String password;
 	boolean compteActif;
-	Date dateAtivation;
+	Date dateInscription;
 	
 }
