@@ -1,5 +1,14 @@
 package com.humanbooster.mediabuzz.business;
 
-public class Utilisateur {
+import java.util.Date;
 
+public class Utilisateur {
+	String nom;
+	String prenom;
+	String pseudo;
+	String mail;
+	String password;
+	boolean compteActif;
+	Date dateAtivation;
+	
 }
