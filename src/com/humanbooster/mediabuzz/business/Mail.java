@@ -1,6 +1,8 @@
 package com.humanbooster.mediabuzz.business;
 
 public class Mail {
-	Utilisateur utilisateur;
-	String sujet;//Possible liste de sujet
+	private Utilisateur emeteur;
+	private Utilisateur destinataire;
+	private String message;
+	private String titre;
 }
