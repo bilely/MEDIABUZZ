@@ -14,13 +14,14 @@ public class Media {
 	private List<Commentaire> commentaires = new ArrayList<>();
 	private String description;
 	private int taille;
+	private int nbVue;
 	private List<Vote> votes = new ArrayList<>();
 	private List<Alerte> alertes = new ArrayList<>();
 	
 	// Constructeurs
 	public Media(String auteur, Utilisateur utilisateur, Date datePublication,
 			List<Tag> tags, List<Commentaire> commentaires, String description,
-			int taille, List<Vote> votes, List<Alerte> alertes) {
+			int taille, List<Vote> votes, List<Alerte> alertes, int nbVue) {
 		super();
 		this.auteur = auteur;
 		this.utilisateur = utilisateur;
@@ -29,6 +30,7 @@ public class Media {
 		this.commentaires = commentaires;
 		this.description = description;
 		this.taille = taille;
+		this.nbVue = nbVue;
 		this.votes = votes;
 		this.alertes = alertes;
 	}

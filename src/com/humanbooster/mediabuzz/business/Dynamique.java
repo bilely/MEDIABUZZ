@@ -14,7 +14,7 @@ public class Dynamique extends Media{
 			List<Commentaire> commentaires, String description, int taille,
 			List<Vote> votes, List<Alerte> alertes, Media media, String duree) {
 		super(auteur, utilisateur, datePublication, tags, commentaires,
-				description, taille, votes, alertes);
+				description, taille, votes, alertes, taille);
 		this.media = media;
 		this.duree = duree;
 	}
