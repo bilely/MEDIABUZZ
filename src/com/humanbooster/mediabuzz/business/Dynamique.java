@@ -12,12 +12,14 @@ public class Dynamique extends Media{
 	public Dynamique(String auteur, Utilisateur utilisateur,
 			Date datePublication, List<Tag> tags,
 			List<Commentaire> commentaires, String description, int taille,
-			List<Vote> votes, List<Alerte> alertes, Media media, String duree) {
+			Vote vote, List<Alerte> alertes, int nbVue, Media media,
+			String duree) {
 		super(auteur, utilisateur, datePublication, tags, commentaires,
-				description, taille, votes, alertes, taille);
+				description, taille, vote, alertes, nbVue);
 		this.media = media;
 		this.duree = duree;
 	}
+	
 
 	
 
