@@ -6,10 +6,13 @@ public class Vote {
 
 	// Attributes
 	private Media media;
-	private int nbVote;
+	// private int nbVote; superficiel car calculabme par une requete COUNT*
 	private Date dateVote;
-	private Top top;
-	private Flop flop;
+	// private Top top; L'utilisation d'une enumerationou d'un set (preferable
+	// set) permet la supression des deux class top et flop
+	// private Flop flop;
+	private ENUM vote; // TODO à rajouter dans le constructeur, getteru et
+						// setteur
 
 	// Constructors
 	public Vote(Media media, int nbVote, Date dateVote, Top top, Flop flop) {
