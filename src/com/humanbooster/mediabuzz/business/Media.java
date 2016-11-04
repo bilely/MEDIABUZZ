@@ -4,9 +4,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Media {
+public abstract class Media {
 
 	// Declaration des attributs
+	private final int NOMBRE_TAG_ASSOCIE_MAX = 5;
 	private String auteur; // En cas ou l'auteur n'est pas le publicateur.TODO!
 	private Utilisateur utilisateur;
 	private Date datePublication;
@@ -117,6 +118,10 @@ public class Media {
 
 	public void setAlertes(List<Alerte> alertes) {
 		this.alertes = alertes;
+	}
+
+	public int getNOMBRE_TAG_ASSOCIE_MAX() {
+		return NOMBRE_TAG_ASSOCIE_MAX;
 	}
 
 }

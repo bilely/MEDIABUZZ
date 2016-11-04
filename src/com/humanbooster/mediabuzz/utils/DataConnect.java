@@ -10,7 +10,7 @@ public class DataConnect {
 			throws SQLException, ClassNotFoundException {
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection connection = DriverManager.getConnection(
-				"jdbc:mysql://localhost:3306/cours_jdbc",
+				"jdbc:mysql://localhost:3306/mediabuzz",
 				"root", "");
 		return connection;
 	}

@@ -1,10 +1,8 @@
 package com.humanbooster.mediabuzz;
 
-public class App {
+public class ClientMedia {
 
 	public static void main(String[] args) {
-		
-		//zone de test standard
 		System.out.println("----------TEST Connection----------");
 
 		System.out.println("----------TEST create----------");
@@ -23,6 +21,17 @@ public class App {
 
 		System.out.println("----------TEST deleteAll----------");
 		
+		System.out.println("----------TEST ClassementTopSimple");
+		
+		System.out.println("----------TEST ClassementTopEgualFirstLevel");
+
+		System.out.println("----------TEST ClassementTopEgualSecondLevel");
+		
+		System.out.println("----------TEST ClassementTopEgualThirdLevel");
+
+
+		
+
 	}
 
 }

@@ -3,7 +3,7 @@ package com.humanbooster.mediabuzz.business;
 import java.util.Date;
 import java.util.List;
 
-public class Statique extends Media{
+public abstract class Statique extends Media{
 
 	public Statique(String auteur, Utilisateur utilisateur,
 			Date datePublication, List<Tag> tags,

@@ -15,18 +15,24 @@ public class Vote {
 						// setteur
 
 	// Constructors
-	public Vote(Media media, int nbVote, Date dateVote, Top top, Flop flop) {
+	public Vote(Media media, Date dateVote, ENUM vote) {
 		super();
 		this.media = media;
-		this.nbVote = nbVote;
 		this.dateVote = dateVote;
-		this.top = top;
-		this.flop = flop;
+		this.vote = vote;
 	}
 
 	// Methods
 
 	// gets&sets
+
+	public ENUM getVote() {
+		return vote;
+	}
+
+	public void setVote(ENUM vote) {
+		this.vote = vote;
+	}
 
 	public Media getMedia() {
 		return media;
@@ -34,14 +40,6 @@ public class Vote {
 
 	public void setMedia(Media media) {
 		this.media = media;
-	}
-
-	public int getNbVote() {
-		return nbVote;
-	}
-
-	public void setNbVote(int nbVote) {
-		this.nbVote = nbVote;
 	}
 
 	public Date getDateVote() {
@@ -52,26 +50,10 @@ public class Vote {
 		this.dateVote = dateVote;
 	}
 
-	public Top getTop() {
-		return top;
-	}
-
-	public void setTop(Top top) {
-		this.top = top;
-	}
-
-	public Flop getFlop() {
-		return flop;
-	}
-
-	public void setFlop(Flop flop) {
-		this.flop = flop;
-	}
-
-	// ToString
 	@Override
 	public String toString() {
-		return "Vote [nbVote=" + nbVote + ", dateVote=" + dateVote + "]";
+		return "Vote [media=" + media + ", dateVote=" + dateVote + ", vote="
+				+ vote + "]";
 	}
 
 }

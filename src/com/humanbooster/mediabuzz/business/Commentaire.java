@@ -3,6 +3,7 @@ package com.humanbooster.mediabuzz.business;
 import java.util.Date;
 
 public class Commentaire {
-	Utilisateur utilisateur;
-	Date datePublication;
+	private Utilisateur utilisateur;
+	private Date datePublication;
+	private Alerte alerte;
 }

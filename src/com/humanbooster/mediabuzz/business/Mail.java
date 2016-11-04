@@ -5,4 +5,5 @@ public class Mail {
 	private Utilisateur destinataire;
 	private String message;
 	private String titre;
+	
 }
