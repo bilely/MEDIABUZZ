@@ -1,5 +1,8 @@
 package com.humanbooster.mediabuzz.business;
 
-public class Alerte {
+import java.util.Date;
 
+public class Alerte {
+	private Date dateAlerte;
+	private Publication publication;
 }
