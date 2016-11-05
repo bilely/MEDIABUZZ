@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="com.humanbooster.mediabuzz.business.Mail" project="MediaBuzz" 
     file="/MediaBuzz/src/com/humanbooster/mediabuzz/business/Mail.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="117" width="176" x="717" y="891"/>    
+    <position height="117" width="176" x="186" y="1060"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <class id="2" language="java" name="com.humanbooster.mediabuzz.business.Media" project="MediaBuzz" 
     file="/MediaBuzz/src/com/humanbooster/mediabuzz/business/Media.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="567" width="452" x="1191" y="284"/>    
+    <position height="567" width="452" x="383" y="453"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,7 +21,7 @@
   </class>  
   <class id="3" language="java" name="com.humanbooster.mediabuzz.business.Alerte" project="MediaBuzz" 
     file="/MediaBuzz/src/com/humanbooster/mediabuzz/business/Alerte.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="176" x="986" y="1156"/>    
+    <position height="81" width="176" x="620" y="1217"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,7 +30,7 @@
   </class>  
   <class id="4" language="java" name="com.humanbooster.mediabuzz.business.Statique" project="MediaBuzz" 
     file="/MediaBuzz/src/com/humanbooster/mediabuzz/business/Statique.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="463" x="1191" y="891"/>    
+    <position height="81" width="463" x="-317" y="1060"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -39,7 +39,7 @@
   </class>  
   <class id="5" language="java" name="com.humanbooster.mediabuzz.business.Administrateur" project="MediaBuzz" 
     file="/MediaBuzz/src/com/humanbooster/mediabuzz/business/Administrateur.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="176" x="655" y="1403"/>    
+    <position height="81" width="176" x="383" y="1464"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -48,7 +48,7 @@
   </class>  
   <class id="6" language="java" name="com.humanbooster.mediabuzz.business.Tag" project="MediaBuzz" 
     file="/MediaBuzz/src/com/humanbooster/mediabuzz/business/Tag.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="176" x="1499" y="37"/>    
+    <position height="81" width="176" x="167" y="188"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -57,7 +57,7 @@
   </class>  
   <class id="7" language="java" name="com.humanbooster.mediabuzz.business.Commentaire" project="MediaBuzz" 
     file="/MediaBuzz/src/com/humanbooster/mediabuzz/business/Commentaire.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="176" x="954" y="891"/>    
+    <position height="99" width="176" x="423" y="1060"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -66,7 +66,7 @@
   </class>  
   <class id="8" language="java" name="com.humanbooster.mediabuzz.business.Vote" project="MediaBuzz" 
     file="/MediaBuzz/src/com/humanbooster/mediabuzz/business/Vote.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="225" width="176" x="2273" y="891"/>    
+    <position height="225" width="176" x="962" y="188"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -75,7 +75,7 @@
   </class>  
   <enumeration id="9" language="java" name="com.humanbooster.mediabuzz.business.ENUM" project="MediaBuzz" 
     file="/MediaBuzz/src/com/humanbooster/mediabuzz/business/ENUM.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="117" width="176" x="2316" y="1156"/>    
+    <position height="117" width="176" x="962" y="453"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -84,7 +84,7 @@
   </enumeration>  
   <class id="10" language="java" name="com.humanbooster.mediabuzz.business.Image" project="MediaBuzz" 
     file="/MediaBuzz/src/com/humanbooster/mediabuzz/business/Image.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="452" x="1202" y="1156"/>    
+    <position height="81" width="452" x="-317" y="1217"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -93,7 +93,7 @@
   </class>  
   <class id="11" language="java" name="com.humanbooster.mediabuzz.business.Dynamique" project="MediaBuzz" 
     file="/MediaBuzz/src/com/humanbooster/mediabuzz/business/Dynamique.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="539" x="1694" y="891"/>    
+    <position height="99" width="539" x="383" y="188"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -102,7 +102,7 @@
   </class>  
   <class id="12" language="java" name="com.humanbooster.mediabuzz.business.Musique" project="MediaBuzz" 
     file="/MediaBuzz/src/com/humanbooster/mediabuzz/business/Musique.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="582" x="1694" y="1156"/>    
+    <position height="81" width="582" x="383" y="67"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -111,263 +111,147 @@
   </class>  
   <class id="13" language="java" name="com.humanbooster.mediabuzz.business.Utilisateur" project="MediaBuzz" 
     file="/MediaBuzz/src/com/humanbooster/mediabuzz/business/Utilisateur.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="207" width="176" x="770" y="1156"/>    
+    <position height="207" width="176" x="383" y="1217"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="14" language="java" name="com.humanbooster.mediabuzz.service.impl.ImageServiceImpl" project="MediaBuzz" 
-    file="/MediaBuzz/src/com/humanbooster/mediabuzz/service/impl/ImageServiceImpl.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="81" width="190" x="271" y="37"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="15" language="java" name="com.humanbooster.mediabuzz.service.impl.UtilisateurServiceImpl" 
-    project="MediaBuzz" file="/MediaBuzz/src/com/humanbooster/mediabuzz/service/impl/UtilisateurServiceImpl.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="135" width="217" x="1741" y="37"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="16" language="java" name="com.humanbooster.mediabuzz.service.impl.CommentaireServiceImpl" 
-    project="MediaBuzz" file="/MediaBuzz/src/com/humanbooster/mediabuzz/service/impl/CommentaireServiceImpl.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="190" x="501" y="37"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="17" language="java" name="com.humanbooster.mediabuzz.service.impl.AlerteServiceImpl" project="MediaBuzz" 
-    file="/MediaBuzz/src/com/humanbooster/mediabuzz/service/impl/AlerteServiceImpl.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="81" width="190" x="41" y="37"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="18" language="java" name="com.humanbooster.mediabuzz.service.impl.MediaServiceImpl" project="MediaBuzz" 
-    file="/MediaBuzz/src/com/humanbooster/mediabuzz/service/impl/MediaServiceImpl.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="207" width="268" x="1191" y="37"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="19" language="java" name="com.humanbooster.mediabuzz.service.impl.MusiqueServiceImpl" project="MediaBuzz" 
-    file="/MediaBuzz/src/com/humanbooster/mediabuzz/service/impl/MusiqueServiceImpl.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="81" width="190" x="2278" y="37"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="20" language="java" name="com.humanbooster.mediabuzz.service.impl.VoteServiceImpl" project="MediaBuzz" 
-    file="/MediaBuzz/src/com/humanbooster/mediabuzz/service/impl/VoteServiceImpl.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="81" width="190" x="731" y="37"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="21" language="java" name="com.humanbooster.mediabuzz.service.impl.TagServiceImpl" project="MediaBuzz" 
-    file="/MediaBuzz/src/com/humanbooster/mediabuzz/service/impl/TagServiceImpl.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="81" width="190" x="2023" y="37"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="22" language="java" name="com.humanbooster.mediabuzz.service.impl.AdministrateurServiceImpl" 
-    project="MediaBuzz" file="/MediaBuzz/src/com/humanbooster/mediabuzz/service/impl/AdministrateurServiceImpl.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="190" x="540" y="1156"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="23" language="java" name="com.humanbooster.mediabuzz.service.impl.MailServiceImpl" project="MediaBuzz" 
-    file="/MediaBuzz/src/com/humanbooster/mediabuzz/service/impl/MailServiceImpl.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="81" width="190" x="961" y="37"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <association id="24">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="25" name="utilisateur"/>      
-      <multiplicity id="26" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="13" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="27">    
+  <association id="14">    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="28" name="vote"/>      
-      <multiplicity id="29" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="30">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="4"/>  
-  </generalization>  
-  <association id="31">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="32" name="emeteur"/>      
-      <multiplicity id="33" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="13" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="34">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="35" name="vote"/>      
-      <multiplicity id="36" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="37">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="11"/>  
-  </generalization>  
-  <association id="38">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="39" name="commentaires"/>      
-      <multiplicity id="40" minimum="0" maximum="2147483647"/>    
+      <attribute id="15" name="commentaires"/>      
+      <multiplicity id="16" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="41">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="42" name="media"/>      
-      <multiplicity id="43" minimum="0" maximum="1"/>    
+  <generalization id="17">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <generalization id="18">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <association id="19">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="20" name="media"/>      
+      <multiplicity id="21" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="44">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <association id="45">    
-    <bendpoint x="1160" y="891"/>    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="46" name="alertes"/>      
-      <multiplicity id="47" minimum="0" maximum="2147483647"/>    
+  <association id="22">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="23" name="emeteur"/>      
+      <multiplicity id="24" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
+    <end type="TARGET" refId="13" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="48">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="49" name="alerte"/>      
-      <multiplicity id="50" minimum="0" maximum="1"/>    
+  <association id="25">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="26" name="destinataire"/>      
+      <multiplicity id="27" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
+    <end type="TARGET" refId="13" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="51">    
-    <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="52" name="dynamique"/>      
-      <multiplicity id="53" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="54">    
+  <generalization id="28">    
     <end type="SOURCE" refId="5"/>    
     <end type="TARGET" refId="13"/>  
   </generalization>  
-  <association id="55">    
-    <bendpoint x="923" y="891"/>    
+  <association id="29">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="30" name="alerte"/>      
+      <multiplicity id="31" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="32">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <association id="33">    
+    <bendpoint x="629" y="1060"/>    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="56" name="utilisateur"/>      
-      <multiplicity id="57" minimum="0" maximum="1"/>    
+      <attribute id="34" name="alertes"/>      
+      <multiplicity id="35" minimum="0" maximum="2147483647"/>    
     </end>    
-    <end type="TARGET" refId="13" navigable="true"/>    
+    <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="58">    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="59" name="media"/>      
-      <multiplicity id="60" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="61">    
-    <end type="SOURCE" refId="22" navigable="false">      
-      <attribute id="62" name="administrateur"/>      
-      <multiplicity id="63" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="64">    
+  <association id="36">    
     <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="65" name="media"/>      
-      <multiplicity id="66" minimum="0" maximum="1"/>    
+      <attribute id="37" name="media"/>      
+      <multiplicity id="38" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="67">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="68" name="destinataire"/>      
-      <multiplicity id="69" minimum="0" maximum="1"/>    
+  <association id="39">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="40" name="vote"/>      
+      <multiplicity id="41" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="13" navigable="true"/>    
+    <end type="TARGET" refId="9" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="70">    
+  <generalization id="42">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <association id="43">    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="71" name="tags"/>      
-      <multiplicity id="72" minimum="0" maximum="2147483647"/>    
+      <attribute id="44" name="tags"/>      
+      <multiplicity id="45" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="73">    
-    <end type="SOURCE" refId="18" navigable="false">      
-      <attribute id="74" name="media"/>      
-      <multiplicity id="75" minimum="0" maximum="2147483647"/>    
+  <association id="46">    
+    <bendpoint x="392" y="1060"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="47" name="utilisateur"/>      
+      <multiplicity id="48" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="49">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="50" name="vote"/>      
+      <multiplicity id="51" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="52">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="53" name="dynamique"/>      
+      <multiplicity id="54" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="55">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="56" name="media"/>      
+      <multiplicity id="57" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="76">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
+  <association id="58">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="59" name="utilisateur"/>      
+      <multiplicity id="60" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
