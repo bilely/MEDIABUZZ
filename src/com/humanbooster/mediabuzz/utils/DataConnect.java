@@ -4,21 +4,18 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-
 public class DataConnect {
-	public static Connection getConnection() 
-			throws SQLException, ClassNotFoundException {
+	
+	public static Connection getConnection() throws SQLException, ClassNotFoundException {
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection connection = DriverManager.getConnection(
-				"jdbc:mysql://localhost:3306/mediabuzz",
-				"root", "");
+		Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mediabuzz", "root", "");
 		return connection;
 	}
-	
-	public static void closeConnection(Connection c){
-		try{
+
+	public static void closeConnection(Connection c) {
+		try {
 			c.close();
-		}catch(SQLException sqle){
+		} catch (SQLException sqle) {
 			sqle.printStackTrace();
 		}
 	}
