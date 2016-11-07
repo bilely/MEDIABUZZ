@@ -1,42 +1,39 @@
 package com.humanbooster.mediabuzz.business;
 
+import java.util.Date;
+
 public class Utilisateur {
 
 	private int id;
 	private String nom;
 	private String mail;
-	private boolean compteActif;
 	private String motDePasse;
+	private Date dateInscription;
+	private boolean compteActif;
 
-	
 	// ------------------------------------ Constructeurs -------------------------------------
-	
-	public Utilisateur(int id, String nom, String mail, boolean compteActif, String motDePasse) {
-		super();
+
+	public Utilisateur(int id, String nom, String mail, String motDePasse) {
 		this.id = id;
 		this.nom = nom;
 		this.mail = mail;
-		this.compteActif = compteActif;
-		this.motDePasse = motDePasse;
+		this.motDePasse = motDePasse;//TODO generateur de mot de passe random
+		this.dateInscription = new Date();
+		this.compteActif = true;
 	}
-
-	public Utilisateur(String nom, String mail, boolean compteActif, String motDePasse) {
-		this.nom = nom;
-		this.mail = mail;
-		this.compteActif = compteActif;
-		this.motDePasse = motDePasse;
-	}
+	
 
 	// ------------------------------------ Getters et Setters -------------------------------------
-	
+
 	public int getId() {
 		return id;
 	}
 
+
 	public void setId(int id) {
 		this.id = id;
 	}
-	
+
 	public String getNom() {
 		return nom;
 	}
@@ -69,10 +66,20 @@ public class Utilisateur {
 		this.motDePasse = motDePasse;
 	}
 
+	public Date getDateInscription() {
+		return dateInscription;
+	}
+
+	public void setDateInscription(Date dateInscription) {
+		this.dateInscription = dateInscription;
+	}
+
 	// ------------------------------------ ToString -------------------------------------
 	@Override
 	public String toString() {
-		return "Utilisateur [id=" + id + ", nom=" + nom + ", mail=" + mail + ", compteActif=" + compteActif
-				+ ", motDePasse=" + motDePasse + "]";
-	}	
+		return "Utilisateur [id=" + id + ", nom=" + nom + ", mail=" + mail + ", motDePasse=" + motDePasse
+				+ ", compteActif=" + compteActif + "]";
+	}
+
+
 }

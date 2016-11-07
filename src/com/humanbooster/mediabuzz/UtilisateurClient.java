@@ -5,6 +5,8 @@ import java.sql.SQLException;
 
 import org.apache.log4j.PropertyConfigurator;
 
+import com.humanbooster.mediabuzz.business.Utilisateur;
+import com.humanbooster.mediabuzz.dao.impl.UtilisateurDaoImpl;
 import com.humanbooster.mediabuzz.utils.Consts;
 import com.humanbooster.mediabuzz.utils.DataConnect;
 
@@ -20,14 +22,15 @@ public class UtilisateurClient {
 		try {
 			
 			connection = DataConnect.getConnection();
-			
+			UtilisateurDaoImpl uDaoImpl = new UtilisateurDaoImpl(connection);
+			Utilisateur u = new Utilisateur(1,"test","mail1","motDePasse");
 			// ------------- zone de tests standard ---------------- \\
 			
 			System.out.println("----------TEST Connection---------");
 			System.out.println(" connexion : " + connection + " \n");
 
 			System.out.println("----------TEST create-------------");
-
+			System.out.println(uDaoImpl.createUser(u));
 			System.out.println("----------TEST get----------------");
 
 			System.out.println("----------TEST insert-------------");
@@ -36,10 +39,10 @@ public class UtilisateurClient {
 
 			System.out.println("----------TEST count*--------------");
 
-
 			System.out.println("----------TEST deleteOne----------");
 
 			System.out.println("----------TEST deleteAll----------");
+			System.out.println(uDaoImpl.deleteAllUser());
 
 		} catch (SQLException | ClassNotFoundException e) {
 			e.printStackTrace();
