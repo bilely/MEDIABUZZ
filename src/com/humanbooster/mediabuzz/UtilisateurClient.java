@@ -3,22 +3,28 @@ package com.humanbooster.mediabuzz;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+import org.apache.log4j.PropertyConfigurator;
+
+import com.humanbooster.mediabuzz.utils.Consts;
 import com.humanbooster.mediabuzz.utils.DataConnect;
 
-public class App {
+public class UtilisateurClient {
 
 	public static void main(String[] args) {
 
-		Connection connexion = null;
+		String log4jConfPath = Consts.LOG4J_CONF_PATH;
+		PropertyConfigurator.configure(log4jConfPath);
 
+		Connection connection = null;
+		
 		try {
-
-			connexion = DataConnect.getConnection();
-
+			
+			connection = DataConnect.getConnection();
+			
 			// ------------- zone de tests standard ---------------- \\
 			
 			System.out.println("----------TEST Connection---------");
-			System.out.println(" connexion : " + connexion + " \n");
+			System.out.println(" connexion : " + connection + " \n");
 
 			System.out.println("----------TEST create-------------");
 
@@ -36,12 +42,13 @@ public class App {
 
 			System.out.println("----------TEST deleteAll----------");
 
-		} catch (SQLException |ClassNotFoundException e) {
+		} catch (SQLException | ClassNotFoundException e) {
 			e.printStackTrace();
 		} finally { 
-			DataConnect.closeConnection(connexion);
+			DataConnect.closeConnection(connection);
 		}
-
+		
+		
 	}
 
 }
