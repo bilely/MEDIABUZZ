@@ -33,7 +33,7 @@ public class UtilisateurClient {
 			System.out.println(uDaoImpl.createUser(u));
 			System.out.println(u);
 			System.out.println("----------TEST get----------------");
-			System.out.println(uDaoImpl.getUser(1));
+			System.out.println(uDaoImpl.getUser("test3"));
 			System.out.println("----------TEST insert-------------");
 
 			System.out.println("----------TEST update-------------");

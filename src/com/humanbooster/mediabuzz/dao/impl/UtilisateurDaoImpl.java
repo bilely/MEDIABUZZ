@@ -47,11 +47,11 @@ private Connection connection;
 
 	// ----------------------------- Méthode getUser ---------------------------------
 	@Override
-	public Utilisateur getUser(int id) {
+	public Utilisateur getUser(String nom) {
 		Utilisateur user = null;
 		try {
 			PreparedStatement ps = connection.prepareStatement(Consts.GET_USER_QUERY);
-			ps.setInt(1, id);
+			ps.setString(1, nom);
 			ResultSet rs = ps.executeQuery();
 			if (rs.next()){
 				user = new Utilisateur(rs.getString(2),rs.getString(3),rs.getDate(4),rs.getString(5),rs.getBoolean(6));
