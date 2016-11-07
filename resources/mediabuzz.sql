@@ -182,7 +182,7 @@ CREATE TABLE Tag(
 #------------------------------------------------------------
 # Table: Vote
 #------------------------------------------------------------
-
+ 
 CREATE TABLE Vote(
         dateVote       Date NOT NULL ,
         enumTopFlop    Enum ("top","flop") ,
