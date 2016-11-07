@@ -1,19 +1,42 @@
 package com.humanbooster.mediabuzz.business;
 
 public class Utilisateur {
+
+	private int id;
 	private String nom;
 	private String mail;
 	private boolean compteActif;
 	private String motDePasse;
+
 	
-	public Utilisateur(String nom, String mail, boolean compteActif,
-			String motDePasse) {
+	// ------------------------------------ Constructeurs -------------------------------------
+	
+	public Utilisateur(int id, String nom, String mail, boolean compteActif, String motDePasse) {
+		super();
+		this.id = id;
 		this.nom = nom;
 		this.mail = mail;
 		this.compteActif = compteActif;
 		this.motDePasse = motDePasse;
 	}
 
+	public Utilisateur(String nom, String mail, boolean compteActif, String motDePasse) {
+		this.nom = nom;
+		this.mail = mail;
+		this.compteActif = compteActif;
+		this.motDePasse = motDePasse;
+	}
+
+	// ------------------------------------ Getters et Setters -------------------------------------
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	
 	public String getNom() {
 		return nom;
 	}
@@ -46,9 +69,10 @@ public class Utilisateur {
 		this.motDePasse = motDePasse;
 	}
 
+	// ------------------------------------ ToString -------------------------------------
 	@Override
 	public String toString() {
-		return "Utilisateur [nom=" + nom + ", mail=" + mail + ", compteActif="
-				+ compteActif + ", motDePasse=" + motDePasse + "]";
-	}
+		return "Utilisateur [id=" + id + ", nom=" + nom + ", mail=" + mail + ", compteActif=" + compteActif
+				+ ", motDePasse=" + motDePasse + "]";
+	}	
 }
