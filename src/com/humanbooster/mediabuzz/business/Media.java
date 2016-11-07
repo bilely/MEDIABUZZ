@@ -10,7 +10,7 @@ public abstract class Media extends Publication{
 		super(auteur, datePublication, titre);
 		// TODO Auto-generated constructor stub
 	}
-
+	
 	private static final int TAILLE_TELEVERSEMET_MAX = 10;
 	private static final int NB_MAX_TAG = 5;
 	private String description;
@@ -37,7 +37,8 @@ public abstract class Media extends Publication{
 	public int getNbVue() {
 		return nbVue;
 	}
-
+	
+	
 	@Override
 	public String toString() {
 		return "Media [description=" + description + ", nbVue=" + nbVue

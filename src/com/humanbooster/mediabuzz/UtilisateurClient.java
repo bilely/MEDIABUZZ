@@ -34,9 +34,8 @@ public class UtilisateurClient {
 
 			System.out.println("----------TEST update-------------");
 
-			System.out.println("----------TEST cont*--------------");
+			System.out.println("----------TEST count*--------------");
 
-			System.out.println("----------TEST deleteOne----------");
 
 			System.out.println("----------TEST deleteOne----------");
 
