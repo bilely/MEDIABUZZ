@@ -3,10 +3,18 @@ package com.humanbooster.mediabuzz.business;
 import java.util.Date;
 
 public class Publication {
+
 	private Utilisateur auteur;
 	private Date datePublication;
 	private String titre;
 	
+	// ------------------------------------ Constructeurs -------------------------------------
+
+	public Publication(Utilisateur auteur, String titre) {
+		this.auteur = auteur;
+		this.datePublication = new Date();
+		this.titre = titre;
+	}
 	
 	public Publication(Utilisateur auteur, Date datePublication, String titre) {
 		this.auteur = auteur;
@@ -14,15 +22,15 @@ public class Publication {
 		this.titre = titre;
 	}
 	
+	// ------------------------------------ Getters et Setters -------------------------------------
+
 	public Utilisateur getAuteur() {
 		return auteur;
 	}
 
-
 	public void setAuteur(Utilisateur auteur) {
 		this.auteur = auteur;
 	}
-
 
 	public Date getDatePublication() {
 		return datePublication;
@@ -45,5 +53,9 @@ public class Publication {
 		return "Publication [auteur=" + auteur + ", datePublication="
 				+ datePublication + ", titre=" + titre + "]";
 	}
+
+	
+	
+	
 	
 }

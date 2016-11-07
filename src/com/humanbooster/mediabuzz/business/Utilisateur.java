@@ -22,7 +22,8 @@ public class Utilisateur {
 		this.compteActif = true;
 	}
 	
-	public Utilisateur(String nom, String mail, Date dateInscription, String motDePasse, boolean compteActif) {
+	public Utilisateur(int ID_User,String nom, String mail, Date dateInscription, String motDePasse, boolean compteActif) {
+		this.id = ID_User;
 		this.nom = nom;
 		this.mail = mail;
 		this.motDePasse = motDePasse;
