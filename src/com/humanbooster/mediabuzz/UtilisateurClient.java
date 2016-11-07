@@ -23,7 +23,7 @@ public class UtilisateurClient {
 			
 			connection = DataConnect.getConnection();
 			UtilisateurDaoImpl uDaoImpl = new UtilisateurDaoImpl(connection);
-			Utilisateur u = new Utilisateur(1,"test","mail1","motDePasse");
+			Utilisateur u = new Utilisateur(1,"test3","mail3","motDePasse");
 			// ------------- zone de tests standard ---------------- \\
 			
 			System.out.println("----------TEST Connection---------");
@@ -31,8 +31,9 @@ public class UtilisateurClient {
 
 			System.out.println("----------TEST create-------------");
 			System.out.println(uDaoImpl.createUser(u));
+			System.out.println(u);
 			System.out.println("----------TEST get----------------");
-
+			System.out.println(uDaoImpl.getUser(1));
 			System.out.println("----------TEST insert-------------");
 
 			System.out.println("----------TEST update-------------");

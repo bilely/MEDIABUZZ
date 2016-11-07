@@ -7,8 +7,8 @@ public class Utilisateur {
 	private int id;
 	private String nom;
 	private String mail;
-	private String motDePasse;
 	private Date dateInscription;
+	private String motDePasse;
 	private boolean compteActif;
 
 	// ------------------------------------ Constructeurs -------------------------------------
@@ -22,8 +22,17 @@ public class Utilisateur {
 		this.compteActif = true;
 	}
 	
+	public Utilisateur(String nom, String mail, Date dateInscription, String motDePasse, boolean compteActif) {
+		this.nom = nom;
+		this.mail = mail;
+		this.motDePasse = motDePasse;
+		this.dateInscription = dateInscription;
+		this.compteActif = compteActif;
+	}
+
 
 	// ------------------------------------ Getters et Setters -------------------------------------
+
 
 	public int getId() {
 		return id;
@@ -78,8 +87,7 @@ public class Utilisateur {
 	@Override
 	public String toString() {
 		return "Utilisateur [id=" + id + ", nom=" + nom + ", mail=" + mail + ", motDePasse=" + motDePasse
-				+ ", compteActif=" + compteActif + "]";
+				+ ", dateInscription=" + dateInscription + ", compteActif=" + compteActif + "]";
 	}
-
 
 }

@@ -2,6 +2,7 @@ package com.humanbooster.mediabuzz.dao.impl;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -46,9 +47,19 @@ private Connection connection;
 
 	// ----------------------------- Méthode getUser ---------------------------------
 	@Override
-	public Utilisateur getUser() {
-		// TODO Auto-generated method stub
-		return null;
+	public Utilisateur getUser(int id) {
+		Utilisateur user = null;
+		try {
+			PreparedStatement ps = connection.prepareStatement(Consts.GET_USER_QUERY);
+			ps.setInt(1, id);
+			ResultSet rs = ps.executeQuery();
+			if (rs.next()){
+				user = new Utilisateur(rs.getString(2),rs.getString(3),rs.getDate(4),rs.getString(5),rs.getBoolean(6));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return user;
 	}
 
 	// ----------------------------- Méthode updateUser ---------------------------------
@@ -87,4 +98,5 @@ private Connection connection;
 		}	
 		return areDeleted;
 	}
+
 }
