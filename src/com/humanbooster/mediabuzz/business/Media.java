@@ -6,18 +6,17 @@ import java.util.List;
 
 
 public abstract class Media extends Publication{
+	public Media(Utilisateur auteur, Date datePublication, String titre) {
+		super(auteur, datePublication, titre);
+		// TODO Auto-generated constructor stub
+	}
+
 	private static final int TAILLE_TELEVERSEMET_MAX = 10;
 	private static final int NB_MAX_TAG = 5;
 	private String description;
-	private final int nbVue = 0;
+	private int nbVue = 0;
 	private List<Tag> tags = new ArrayList<>();
-	
-	public Media(String auteur, Date datePublication, String titre,
-			String description, List<Tag> tags) {
-		super(auteur, datePublication, titre);
-		this.description = description;
-		this.tags = tags;
-	}
+	private List<Alerte> alertes = new ArrayList<>();
 
 	public String getDescription() {
 		return description;
@@ -51,6 +50,14 @@ public abstract class Media extends Publication{
 
 	public static int getTailleTeleversemetMax() {
 		return TAILLE_TELEVERSEMET_MAX;
+	}
+
+	public List<Alerte> getAlertes() {
+		return alertes;
+	}
+
+	public void setAlertes(List<Alerte> alertes) {
+		this.alertes = alertes;
 	}
 	
 }

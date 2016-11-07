@@ -1,0 +1,188 @@
+INFO - ------------TEST CONNEXION---------------
+ 
+INFO -  Connection : com.mysql.jdbc.JDBC4Connection@368102c8
+
+INFO - ------------TEST GET NOMBRE DE BASKETS---------------
+ 
+INFO -  nb de Basket avant création: 0
+INFO - ---------------TEST CREATION---------------
+ 
+INFO -  basket à créer: Basket [id=0, brand=adidas, color=vert, price=56.0, date=2016-10-25, user=null]
+INFO - 2016-10-25
+INFO -  nb de Basket après création: 1
+INFO - 1
+INFO -  basket créée Basket [id=1, brand=adidas, color=vert, price=56.0, date=2016-10-25, user=null]
+INFO - ------------ TEST RECHERCHE PAR LA MARQUE ---------------
+ 
+INFO - Liste des baskets Adidas
+ 
+INFO - adidas
+INFO - Basket [id=1, brand=adidas, color=vert, price=56.0, date=null, user=null]
+INFO - ------------ TEST GET BASKET PAR SON ID ---------------
+ 
+INFO - 1
+INFO -  Dernière basket de la table : Basket [id=1, brand=adidas, color=vert, price=56.0, date=2016-10-25, user=null]
+
+INFO - ------------ TEST MISE A JOUR BASKET ---------------
+ 
+INFO - 1
+INFO -  Basket avant MAJ : Basket [id=1, brand=adidas, color=vert, price=56.0, date=2016-10-25, user=null]
+INFO - 1,50.0,argent
+INFO - 1
+INFO -  Basket après MAJ : Basket [id=1, brand=adidas, color=argent, price=50.0, date=2016-10-25, user=null]
+INFO - ------------ TEST CREATION PAR LOT ---------------
+ 
+INFO -  Liste des baskets après création 
+
+INFO - Basket [id=1, brand=adidas, color=argent, price=50.0, date=null, user=null]
+INFO - Basket [id=2, brand=puma, color=doré, price=32.0, date=null, user=null]
+INFO - Basket [id=3, brand=umbro, color=noir, price=10.0, date=null, user=null]
+INFO - Basket [id=4, brand=lacoste, color=jaune, price=5.0, date=null, user=null]
+INFO - ---------------TEST MAJ PAR LOT----------------
+ 
+INFO - Basket avant maj
+ 
+INFO - Basket [id=0, brand=reebook, color=jaune, price=5.0, date=null, user=null]
+INFO - Basket [id=0, brand=reebook, color=marron, price=10.0, date=null, user=null]
+INFO - Basket apres maj
+ 
+INFO - reebook
+INFO - Basket [id=5, brand=reebook, color=rouge, price=5.0, date=null, user=null]
+INFO - Basket [id=6, brand=reebook, color=bleu, price=10.0, date=null, user=null]
+INFO - ---------------TEST CREER UNE BASKET AVEC UN USER ET UNE DATE----------------
+ 
+INFO - 2016-10-25
+INFO - ---------------TEST RECHERCHE BASKET DONT DATE > date donnée----------------
+ 
+INFO - ---------------TEST RECHERCHE BASKET BY ID avec user------
+ 
+INFO - -------------------TEST TRANSACTION -------------------
+
+INFO - 1
+INFO -  basket n°1 avant transaction : Basket [id=1, brand=adidas, color=argent, price=50.0, date=2016-10-25, user=null]
+INFO - 1
+INFO -  basket n°1 après transaction : Basket [id=1, brand=adidas, color=argent, price=50.0, date=2016-10-25, user=null]
+INFO - ------------ TEST PROCEDURE ---------------
+ 
+INFO - ------------ TEST SUPPRESSION BASKET ---------------
+ 
+INFO -  Liste des baskets avant suppression 
+
+INFO - Basket [id=1, brand=adidas, color=argent, price=50.0, date=null, user=null]
+INFO - Basket [id=2, brand=puma, color=doré, price=32.0, date=null, user=null]
+INFO - Basket [id=3, brand=umbro, color=noir, price=10.0, date=null, user=null]
+INFO - Basket [id=4, brand=lacoste, color=jaune, price=5.0, date=null, user=null]
+INFO - Basket [id=5, brand=reebook, color=rouge, price=5.0, date=null, user=null]
+INFO - Basket [id=6, brand=reebook, color=bleu, price=10.0, date=null, user=null]
+INFO - Basket [id=7, brand=umbro, color=violet, price=3.0, date=null, user=null]
+INFO - Basket [id=8, brand=umbro, color=violet, price=3.0, date=null, user=null]
+INFO - Basket [id=9, brand=nike, color=rose, price=80.9, date=null, user=null]
+INFO - 1
+INFO -  Liste des baskets après suppression 
+
+INFO - Basket [id=2, brand=puma, color=doré, price=32.0, date=null, user=null]
+INFO - Basket [id=3, brand=umbro, color=noir, price=10.0, date=null, user=null]
+INFO - Basket [id=4, brand=lacoste, color=jaune, price=5.0, date=null, user=null]
+INFO - Basket [id=5, brand=reebook, color=rouge, price=5.0, date=null, user=null]
+INFO - Basket [id=6, brand=reebook, color=bleu, price=10.0, date=null, user=null]
+INFO - Basket [id=7, brand=umbro, color=violet, price=3.0, date=null, user=null]
+INFO - Basket [id=8, brand=umbro, color=violet, price=3.0, date=null, user=null]
+INFO - Basket [id=9, brand=nike, color=rose, price=80.9, date=null, user=null]
+INFO - ------------ SUPPRESSION ALL BASKET ---------------
+ 
+INFO -  Liste des baskets après suppression complète 
+
+INFO - ------------TEST CONNEXION---------------
+ 
+INFO -  Connection : com.mysql.jdbc.JDBC4Connection@368102c8
+
+INFO - ------------TEST GET NOMBRE DE BASKETS---------------
+ 
+INFO -  nb de Basket avant création: 0
+INFO - ---------------TEST CREATION---------------
+ 
+INFO -  basket à créer: Basket [id=0, brand=adidas, color=vert, price=56.0, date=2016-10-26, user=null]
+INFO - 2016-10-26
+INFO -  nb de Basket après création: 1
+INFO - 1
+INFO -  basket créée Basket [id=1, brand=adidas, color=vert, price=56.0, date=2016-10-26, user=null]
+INFO - ------------ TEST RECHERCHE PAR LA MARQUE ---------------
+ 
+INFO - Liste des baskets Adidas
+ 
+INFO - adidas
+INFO - Basket [id=1, brand=adidas, color=vert, price=56.0, date=null, user=null]
+INFO - ------------ TEST GET BASKET PAR SON ID ---------------
+ 
+INFO - 1
+INFO -  Dernière basket de la table : Basket [id=1, brand=adidas, color=vert, price=56.0, date=2016-10-26, user=null]
+
+INFO - ------------ TEST MISE A JOUR BASKET ---------------
+ 
+INFO - 1
+INFO -  Basket avant MAJ : Basket [id=1, brand=adidas, color=vert, price=56.0, date=2016-10-26, user=null]
+INFO - 1,50.0,argent
+INFO - 1
+INFO -  Basket après MAJ : Basket [id=1, brand=adidas, color=argent, price=50.0, date=2016-10-26, user=null]
+INFO - ------------ TEST CREATION PAR LOT ---------------
+ 
+INFO -  Liste des baskets après création 
+
+INFO - Basket [id=1, brand=adidas, color=argent, price=50.0, date=null, user=null]
+INFO - Basket [id=2, brand=puma, color=doré, price=32.0, date=null, user=null]
+INFO - Basket [id=3, brand=umbro, color=noir, price=10.0, date=null, user=null]
+INFO - Basket [id=4, brand=lacoste, color=jaune, price=5.0, date=null, user=null]
+INFO - ---------------TEST MAJ PAR LOT----------------
+ 
+INFO - Basket avant maj
+ 
+INFO - Basket [id=0, brand=reebook, color=jaune, price=5.0, date=null, user=null]
+INFO - Basket [id=0, brand=reebook, color=marron, price=10.0, date=null, user=null]
+INFO - Basket apres maj
+ 
+INFO - reebook
+INFO - Basket [id=5, brand=reebook, color=rouge, price=5.0, date=null, user=null]
+INFO - Basket [id=6, brand=reebook, color=bleu, price=10.0, date=null, user=null]
+INFO - ---------------TEST CREER UNE BASKET AVEC UN USER ET UNE DATE----------------
+ 
+INFO - 2016-10-26
+INFO - ---------------TEST RECHERCHE BASKET DONT DATE > date donnée----------------
+ 
+INFO - ---------------TEST RECHERCHE BASKET BY ID avec user------
+ 
+INFO - -------------------TEST TRANSACTION -------------------
+
+INFO - 1
+INFO -  basket n°1 avant transaction : Basket [id=1, brand=adidas, color=argent, price=50.0, date=2016-10-26, user=null]
+INFO - 1
+INFO -  basket n°1 après transaction : Basket [id=1, brand=adidas, color=argent, price=50.0, date=2016-10-26, user=null]
+INFO - ------------ TEST PROCEDURE ---------------
+ 
+INFO - ------------ TEST SUPPRESSION BASKET ---------------
+ 
+INFO -  Liste des baskets avant suppression 
+
+INFO - Basket [id=1, brand=adidas, color=argent, price=50.0, date=null, user=null]
+INFO - Basket [id=2, brand=puma, color=doré, price=32.0, date=null, user=null]
+INFO - Basket [id=3, brand=umbro, color=noir, price=10.0, date=null, user=null]
+INFO - Basket [id=4, brand=lacoste, color=jaune, price=5.0, date=null, user=null]
+INFO - Basket [id=5, brand=reebook, color=rouge, price=5.0, date=null, user=null]
+INFO - Basket [id=6, brand=reebook, color=bleu, price=10.0, date=null, user=null]
+INFO - Basket [id=7, brand=umbro, color=violet, price=3.0, date=null, user=null]
+INFO - Basket [id=8, brand=umbro, color=violet, price=3.0, date=null, user=null]
+INFO - Basket [id=9, brand=nike, color=rose, price=80.9, date=null, user=null]
+INFO - 1
+INFO -  Liste des baskets après suppression 
+
+INFO - Basket [id=2, brand=puma, color=doré, price=32.0, date=null, user=null]
+INFO - Basket [id=3, brand=umbro, color=noir, price=10.0, date=null, user=null]
+INFO - Basket [id=4, brand=lacoste, color=jaune, price=5.0, date=null, user=null]
+INFO - Basket [id=5, brand=reebook, color=rouge, price=5.0, date=null, user=null]
+INFO - Basket [id=6, brand=reebook, color=bleu, price=10.0, date=null, user=null]
+INFO - Basket [id=7, brand=umbro, color=violet, price=3.0, date=null, user=null]
+INFO - Basket [id=8, brand=umbro, color=violet, price=3.0, date=null, user=null]
+INFO - Basket [id=9, brand=nike, color=rose, price=80.9, date=null, user=null]
+INFO - ------------ SUPPRESSION ALL BASKET ---------------
+ 
+INFO -  Liste des baskets après suppression complète 
+

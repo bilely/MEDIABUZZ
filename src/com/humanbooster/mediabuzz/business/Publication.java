@@ -3,23 +3,26 @@ package com.humanbooster.mediabuzz.business;
 import java.util.Date;
 
 public class Publication {
-	private String auteur;
+	private Utilisateur auteur;
 	private Date datePublication;
 	private String titre;
 	
-	public Publication(String auteur, Date datePublication, String titre) {
+	
+	public Publication(Utilisateur auteur, Date datePublication, String titre) {
 		this.auteur = auteur;
 		this.datePublication = datePublication;
 		this.titre = titre;
 	}
-
-	public String getAuteur() {
+	
+	public Utilisateur getAuteur() {
 		return auteur;
 	}
 
-	public void setAuteur(String auteur) {
+
+	public void setAuteur(Utilisateur auteur) {
 		this.auteur = auteur;
 	}
+
 
 	public Date getDatePublication() {
 		return datePublication;

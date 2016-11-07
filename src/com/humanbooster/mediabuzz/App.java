@@ -36,11 +36,9 @@ public class App {
 
 			System.out.println("----------TEST deleteAll----------");
 
-		} catch (SQLException sqle) {
-			sqle.printStackTrace();
-		} catch (ClassNotFoundException cnfe) {
-			cnfe.printStackTrace();
-		} finally { // finaly s'execute quoi qu'il en soit.
+		} catch (SQLException |ClassNotFoundException e) {
+			e.printStackTrace();
+		} finally { 
 			DataConnect.closeConnection(connexion);
 		}
 

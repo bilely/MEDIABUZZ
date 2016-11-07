@@ -5,13 +5,13 @@ import java.util.Date;
 import java.util.List;
 
 public abstract class Dynamique extends Media{
-	private Time duree;
 	private static final int DUREE_MAX = 10;
-	
-	public Dynamique(String auteur, Date datePublication, String titre,
-			String description, List<Tag> tags) {
-		super(auteur, datePublication, titre, description, tags);
-		
+	private Time duree;
+
+	public Dynamique(Utilisateur auteur, Date datePublication, String titre,
+			Time duree) {
+		super(auteur, datePublication, titre);
+		this.duree = duree;
 	}
 
 	public Time getDuree() {

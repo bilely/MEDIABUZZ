@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Commentaire extends Publication {
 	
-	public Commentaire(String auteur, Date datePublication, String titre) {
+	public Commentaire(Utilisateur auteur, Date datePublication, String titre) {
 		super(auteur, datePublication, titre);
 	}
 
