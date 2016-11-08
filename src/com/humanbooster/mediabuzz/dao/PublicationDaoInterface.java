@@ -7,9 +7,9 @@ import com.humanbooster.mediabuzz.business.Utilisateur;
 
 public interface PublicationDaoInterface {
 	public boolean createPublication(Publication publication);
-	public List<Publication> getPublication(String nom);
-	public boolean updatePublication();
-	public Publication addPublication();
-	public boolean deletePublication();
+	public List<Publication> getAllPublication(String nom);
+	public Publication getPublication(int id);
+	public boolean updatePublication(Publication publication);
+	public boolean deletePublication(int id);
 	boolean deleteAllPublication();
 }

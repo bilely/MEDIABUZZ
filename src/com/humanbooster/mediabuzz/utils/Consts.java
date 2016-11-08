@@ -14,10 +14,15 @@ public final class Consts {
 	
 	
 	// Publication
-	////Utilisateur auteur, Date datePublication, String titre
 	public static final String CREATE_PUBLICATION_QUERY = "INSERT INTO publication (auteur,datePublication,titre,ID_User) VALUES (?,?,?,?)";
-	public static final String DELETE_ALL_PUBLICATION_QUERY = "DELETE FROM publication";
 	public static final String RESET_AUTO_INCREMENT_PUBLICATION_QUERY = "ALTER TABLE publication AUTO_INCREMENT = 1";
 	
-	public static final String GET_PUBLICATION_QUERY = "SELECT * FROM publication WHERE Auteur = ?";
+	public static final String GET_ALL_PUBLICATION_TO_ONE_QUERY = "SELECT * FROM publication WHERE Auteur = ?";
+	public static final String GET_ONE_PUBLICATION ="SELECT*FROM publication WHERE ID_publication = ?";
+	
+	public static final String UPDATE_PUBLICATION_QUERY = "UPDATE publication SET datePublication = CURDATE() WHERE ID_publication = ?";
+	
+	public static final String DELETE_ONE_PUBLICATION_QUERY = "DELETE FROM publication WHERE ID_publication = ?";
+	public static final String DELETE_ALL_PUBLICATION_QUERY = "DELETE FROM publication";
+
 }

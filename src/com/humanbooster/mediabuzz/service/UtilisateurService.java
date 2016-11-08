@@ -8,4 +8,5 @@ public interface UtilisateurService {
 	public boolean supUtilisateur(Utilisateur utilisateur);
 	
 	public boolean debloquerUtilisateur(Utilisateur utilisateur);
+	
 }

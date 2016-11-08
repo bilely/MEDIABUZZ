@@ -24,9 +24,11 @@ public class PublicationClient {
 
 			connection = DataConnect.getConnection();
 			Utilisateur u = new Utilisateur(1, "test", "mail@", "motDePasseRandom");
+			Utilisateur u2 = new Utilisateur(2, "test2", "mail2@", "motDePasseRandom2");
 			UtilisateurDaoImpl uDaoImpl = new UtilisateurDaoImpl(connection);
-			Publication pub = new Publication(u,"PremièreProduction");
-			Publication pub2 = new Publication(u,"DeuxièmeProduction");
+			Publication pub = new Publication(1,u,"PremièreProduction");
+			Publication pub2 = new Publication(2,u,"DeuxièmeProduction");
+			Publication pub3 = new Publication(3,u2,"TroisièmeProduction");
 			PublicationDaoImpl pDaoImpl = new PublicationDaoImpl(connection);
 			// ------------- zone de tests standard ---------------- \\
 
@@ -35,24 +37,27 @@ public class PublicationClient {
 
 			System.out.println("----------TEST create-------------");
 			System.out.println(uDaoImpl.createUser(u));
+			System.out.println(uDaoImpl.createUser(u2));
 			System.out.println(pDaoImpl.createPublication(pub));
 			System.out.println(pDaoImpl.createPublication(pub2));
+			System.out.println(pDaoImpl.createPublication(pub3));
 			System.out.println(pub);
 			System.out.println(pub2);
-			System.out.println("----------TEST get----------------");
-			for(Publication liste : pDaoImpl.getPublication("test"))
-				System.out.println(liste);
+			System.out.println(pub3);
+			System.out.println("----------TEST getAllPublication----------------");
+			for(Publication liste : pDaoImpl.getAllPublication("test"))
+			System.out.println(liste);
+			System.out.println("----------TEST getOnePublication----------------");
+			System.out.println(pDaoImpl.getPublication(3));
 			System.out.println("----------TEST insert-------------");
 
 			System.out.println("----------TEST update-------------");
-
-			System.out.println("----------TEST count*--------------");
-
+			System.out.println(pDaoImpl.updatePublication(pub));
 			System.out.println("----------TEST deleteOne----------");
-
+			System.out.println(pDaoImpl.deletePublication(3));
 			System.out.println("----------TEST deleteAll----------");
-			System.out.println(uDaoImpl.deleteAllUser());
 			System.out.println(pDaoImpl.deleteAllPublication());
+			System.out.println(uDaoImpl.deleteAllUser());
 
 		} catch (SQLException | ClassNotFoundException e) {
 			e.printStackTrace();
