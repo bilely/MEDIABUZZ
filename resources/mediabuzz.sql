@@ -1,5 +1,5 @@
-CREATE DATABASE mediabuzz;
-use mediabuzz;
+CREATE DATABASE exo_servlet;
+use exo_servlet;
   
 #------------------------------------------------------------
 #        Script MySQL.
@@ -212,3 +212,12 @@ ALTER TABLE Alerte ADD CONSTRAINT FK_Alerte_ID_publication FOREIGN KEY (ID_publi
 ALTER TABLE Administrateur ADD CONSTRAINT FK_Administrateur_ID_User FOREIGN KEY (ID_User) REFERENCES Utilisateur(ID_User);
 ALTER TABLE Vote ADD CONSTRAINT FK_Vote_ID_publication FOREIGN KEY (ID_publication) REFERENCES Publication(ID_publication);
 ALTER TABLE Vote ADD CONSTRAINT FK_Vote_ID_Tag FOREIGN KEY (ID_Tag) REFERENCES Tag(ID_Tag);
+
+CREATE TABLE users (
+        uid INT Auto_increment NOT NULL,
+        login Varchar(255),
+        password Varchar(60) NOT NULL, 
+        PRIMARY KEY (uid)
+);
+
+INSERT INTO users(login,password) VALUES ('root','root'),('safia','safia'),('safinette','safinette');

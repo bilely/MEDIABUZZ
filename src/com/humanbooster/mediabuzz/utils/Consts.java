@@ -22,6 +22,8 @@ public final class Consts {
 	
 	public static final String UPDATE_PUBLICATION_QUERY = "UPDATE publication SET datePublication = CURDATE() WHERE ID_publication = ?";
 	
+	public static final String COUNT_PUBLICATION_TO_QUERY = "SELECT COUNT(*) FROM publication WHERE ID_User = ?";
+
 	public static final String DELETE_ONE_PUBLICATION_QUERY = "DELETE FROM publication WHERE ID_publication = ?";
 	public static final String DELETE_ALL_PUBLICATION_QUERY = "DELETE FROM publication";
 

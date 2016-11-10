@@ -11,11 +11,12 @@ public class Publication {
 	
 	// ------------------------------------ Constructeurs -------------------------------------
 
-	public Publication(int id, Utilisateur auteur, String titre) {
+	public Publication(int id, Utilisateur auteur, String titre, int idAuteur) {
 		this.id = id;
 		this.auteur = auteur;
 		this.datePublication = new Date();
 		this.titre = titre;
+		this.idAuteur = idAuteur;
 	}
 	
 	public Publication(int id, Utilisateur auteur, Date datePublication, String titre, int idAuteur) {
