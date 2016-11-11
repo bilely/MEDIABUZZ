@@ -20,10 +20,11 @@ public class Publication {
 	}
 	
 	public Publication(int id, Utilisateur auteur, Date datePublication, String titre, int idAuteur) {
+		this.id = id;
 		this.auteur = auteur;
 		this.datePublication = datePublication;
 		this.titre = titre;
-		this.setIdAuteur(idAuteur);
+		this.idAuteur = idAuteur;
 	}
 	
 	// ------------------------------------ Getters et Setters -------------------------------------

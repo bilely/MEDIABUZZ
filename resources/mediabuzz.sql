@@ -1,5 +1,5 @@
-CREATE DATABASE exo_servlet;
-use exo_servlet;
+CREATE DATABASE mediabuzz;
+use mediabuzz;
   
 #------------------------------------------------------------
 #        Script MySQL.
@@ -10,28 +10,28 @@ use exo_servlet;
 # Table: Utilisateur
 #------------------------------------------------------------
 
-CREATE TABLE Utilisateur(
-        ID_User         int (11) Auto_increment  NOT NULL ,
+CREATE TABLE utilisateur(
+        ID_user         int (11) Auto_increment  NOT NULL ,
         nom             Varchar (25) NOT NULL ,
         mail            Varchar (25) NOT NULL ,
-        dateInscription Date NOT NULL ,
+        dateInscription TIMESTAMP NOT NULL ,
         mdp             Varchar (25) NOT NULL ,
         compteActif     Bool ,
-        PRIMARY KEY (ID_User ) ,
+        PRIMARY KEY (ID_user ) ,
         UNIQUE (nom ,mail )
 )ENGINE=InnoDB;
 
 
 #------------------------------------------------------------
-# Table: Publication
+# Table: publication
 #------------------------------------------------------------
 
-CREATE TABLE Publication(
+CREATE TABLE publication(
         ID_publication  int (11) Auto_increment  NOT NULL ,
-        Auteur          Varchar (25) ,
-        datePublication Date ,
+        auteur          Varchar (25) ,
+        datePublication TIMESTAMP ,
         titre           Varchar (25) ,
-        ID_User         Int NOT NULL ,
+        ID_user         Int NOT NULL ,
         PRIMARY KEY (ID_publication )
 )ENGINE=InnoDB;
 
@@ -40,14 +40,14 @@ CREATE TABLE Publication(
 # Table: Media
 #------------------------------------------------------------
 
-CREATE TABLE Media(
-        ID_Media       int (11) Auto_increment  NOT NULL ,
+CREATE TABLE media(
+        ID_media       int (11) Auto_increment  NOT NULL ,
         description    Varchar (25) NOT NULL ,
         tailleMax      Int NOT NULL ,
         nbMaxTag       Int NOT NULL ,
         nbVue          Int NOT NULL ,
         ID_publication Int NOT NULL ,
-        PRIMARY KEY (ID_Media ,ID_publication )
+        PRIMARY KEY (ID_media ,ID_publication )
 )ENGINE=InnoDB;
 
 
@@ -55,26 +55,26 @@ CREATE TABLE Media(
 # Table: MediaDynamique
 #------------------------------------------------------------
 
-CREATE TABLE MediaDynamique(
+CREATE TABLE mediaDynamique(
         ID_mediaDynamique int (11) Auto_increment  NOT NULL ,
         duree             Time NOT NULL ,
         dureeMax          Time NOT NULL ,
-        ID_Media          Int NOT NULL ,
+        ID_media          Int NOT NULL ,
         ID_publication    Int NOT NULL ,
-        PRIMARY KEY (ID_mediaDynamique ,ID_Media ,ID_publication )
+        PRIMARY KEY (ID_mediaDynamique ,ID_media ,ID_publication )
 )ENGINE=InnoDB;
 
 
 #------------------------------------------------------------
-# Table: mediaStatique
+# Table: MediaStatique
 #------------------------------------------------------------
 
 CREATE TABLE mediaStatique(
         ID_mediaStatique int (11) Auto_increment  NOT NULL ,
         tailleMax        Int ,
-        ID_Media         Int NOT NULL ,
+        ID_media         Int NOT NULL ,
         ID_publication   Int NOT NULL ,
-        PRIMARY KEY (ID_mediaStatique ,ID_Media ,ID_publication )
+        PRIMARY KEY (ID_mediaStatique ,ID_media ,ID_publication )
 )ENGINE=InnoDB;
 
 
@@ -82,12 +82,12 @@ CREATE TABLE mediaStatique(
 # Table: Audio
 #------------------------------------------------------------
 
-CREATE TABLE Audio(
+CREATE TABLE audio(
         ID_audio          int (11) Auto_increment  NOT NULL ,
         ID_mediaDynamique Int NOT NULL ,
-        ID_Media          Int NOT NULL ,
+        ID_media          Int NOT NULL ,
         ID_publication    Int NOT NULL ,
-        PRIMARY KEY (ID_audio ,ID_mediaDynamique ,ID_Media ,ID_publication )
+        PRIMARY KEY (ID_audio ,ID_mediaDynamique ,ID_media ,ID_publication )
 )ENGINE=InnoDB;
 
 
@@ -95,12 +95,12 @@ CREATE TABLE Audio(
 # Table: Video
 #------------------------------------------------------------
 
-CREATE TABLE Video(
-        Id_Video          int (11) Auto_increment  NOT NULL ,
+CREATE TABLE video(
+        Id_video          int (11) Auto_increment  NOT NULL ,
         ID_mediaDynamique Int NOT NULL ,
-        ID_Media          Int NOT NULL ,
+        ID_media          Int NOT NULL ,
         ID_publication    Int NOT NULL ,
-        PRIMARY KEY (Id_Video ,ID_mediaDynamique ,ID_Media ,ID_publication )
+        PRIMARY KEY (Id_video ,ID_mediaDynamique ,ID_media ,ID_publication )
 )ENGINE=InnoDB;
 
 
@@ -108,12 +108,12 @@ CREATE TABLE Video(
 # Table: Image
 #------------------------------------------------------------
 
-CREATE TABLE Image(
-        ID_Image         int (11) Auto_increment  NOT NULL ,
+CREATE TABLE image(
+        ID_image         int (11) Auto_increment  NOT NULL ,
         ID_mediaStatique Int NOT NULL ,
-        ID_Media         Int NOT NULL ,
+        ID_media         Int NOT NULL ,
         ID_publication   Int NOT NULL ,
-        PRIMARY KEY (ID_Image ,ID_mediaStatique ,ID_Media ,ID_publication )
+        PRIMARY KEY (ID_image ,ID_mediaStatique ,ID_media ,ID_publication )
 )ENGINE=InnoDB;
 
 
@@ -121,26 +121,26 @@ CREATE TABLE Image(
 # Table: Mail
 #------------------------------------------------------------
 
-CREATE TABLE Mail(
-        ID_Mail      int (11) Auto_increment  NOT NULL ,
+CREATE TABLE mail(
+        ID_mail      int (11) Auto_increment  NOT NULL ,
         destinataire Varchar (25) NOT NULL ,
         emetteur     Varchar (25) NOT NULL ,
         titre        Varchar (25) ,
         message      Varchar (25) ,
-        ID_User      Int NOT NULL ,
-        PRIMARY KEY (ID_Mail )
+        ID_user      Int NOT NULL ,
+        PRIMARY KEY (Id_mail )
 )ENGINE=InnoDB;
 
 
 #------------------------------------------------------------
-# Table: Commentaire
+# Table: commentaire
 #------------------------------------------------------------
 
-CREATE TABLE Commentaire(
-        ID_Commentaire int (11) Auto_increment  NOT NULL ,
+CREATE TABLE commentaire(
+        ID_commentaire int (11) Auto_increment  NOT NULL ,
         contenu        Varchar (300) ,
         ID_publication Int NOT NULL ,
-        PRIMARY KEY (ID_Commentaire ,ID_publication )
+        PRIMARY KEY (ID_commentaire ,ID_publication )
 )ENGINE=InnoDB;
 
 
@@ -148,11 +148,11 @@ CREATE TABLE Commentaire(
 # Table: Alerte
 #------------------------------------------------------------
 
-CREATE TABLE Alerte(
-        ID_Alerte      int (11) Auto_increment  NOT NULL ,
-        dateAlerte     Date NOT NULL ,
+CREATE TABLE alerte(
+        ID_alerte      int (11) Auto_increment  NOT NULL ,
+        dateAlerte     TIMESTAMP NOT NULL ,
         ID_publication Int NOT NULL ,
-        PRIMARY KEY (ID_Alerte )
+        PRIMARY KEY (ID_alerte )
 )ENGINE=InnoDB;
 
 
@@ -160,10 +160,10 @@ CREATE TABLE Alerte(
 # Table: Administrateur
 #------------------------------------------------------------
 
-CREATE TABLE Administrateur(
-        ID_Admin int (11) Auto_increment  NOT NULL ,
-        ID_User  Int NOT NULL ,
-        PRIMARY KEY (ID_Admin ,ID_User )
+CREATE TABLE administrateur(
+        ID_admin int (11) Auto_increment  NOT NULL ,
+        ID_user  Int NOT NULL ,
+        PRIMARY KEY (ID_admin ,ID_user )
 )ENGINE=InnoDB;
 
 
@@ -171,10 +171,10 @@ CREATE TABLE Administrateur(
 # Table: Tag
 #------------------------------------------------------------
 
-CREATE TABLE Tag(
-        ID_Tag int (11) Auto_increment  NOT NULL ,
+CREATE TABLE tag(
+        ID_tag int (11) Auto_increment  NOT NULL ,
         nom    Varchar (25) NOT NULL ,
-        PRIMARY KEY (ID_Tag ) ,
+        PRIMARY KEY (ID_tag ) ,
         UNIQUE (nom )
 )ENGINE=InnoDB;
 
@@ -183,41 +183,32 @@ CREATE TABLE Tag(
 # Table: Vote
 #------------------------------------------------------------
  
-CREATE TABLE Vote(
-        dateVote       Date NOT NULL ,
+CREATE TABLE vote(
+        dateVote       TIMESTAMP NOT NULL ,
         enumTopFlop    Enum ("top","flop") ,
         ID_publication Int NOT NULL ,
-        ID_Tag         Int NOT NULL ,
-        PRIMARY KEY (ID_publication ,ID_Tag )
+        ID_tag         Int NOT NULL ,
+        PRIMARY KEY (ID_publication ,ID_tag )
 )ENGINE=InnoDB;
 
-ALTER TABLE Publication ADD CONSTRAINT FK_Publication_ID_User FOREIGN KEY (ID_User) REFERENCES Utilisateur(ID_User);
-ALTER TABLE Media ADD CONSTRAINT FK_Media_ID_publication FOREIGN KEY (ID_publication) REFERENCES Publication(ID_publication);
-ALTER TABLE MediaDynamique ADD CONSTRAINT FK_MediaDynamique_ID_Media FOREIGN KEY (ID_Media) REFERENCES Media(ID_Media);
-ALTER TABLE MediaDynamique ADD CONSTRAINT FK_MediaDynamique_ID_publication FOREIGN KEY (ID_publication) REFERENCES Publication(ID_publication);
-ALTER TABLE mediaStatique ADD CONSTRAINT FK_mediaStatique_ID_Media FOREIGN KEY (ID_Media) REFERENCES Media(ID_Media);
-ALTER TABLE mediaStatique ADD CONSTRAINT FK_mediaStatique_ID_publication FOREIGN KEY (ID_publication) REFERENCES Publication(ID_publication);
-ALTER TABLE Audio ADD CONSTRAINT FK_Audio_ID_mediaDynamique FOREIGN KEY (ID_mediaDynamique) REFERENCES MediaDynamique(ID_mediaDynamique);
-ALTER TABLE Audio ADD CONSTRAINT FK_Audio_ID_Media FOREIGN KEY (ID_Media) REFERENCES Media(ID_Media);
-ALTER TABLE Audio ADD CONSTRAINT FK_Audio_ID_publication FOREIGN KEY (ID_publication) REFERENCES Publication(ID_publication);
-ALTER TABLE Video ADD CONSTRAINT FK_Video_ID_mediaDynamique FOREIGN KEY (ID_mediaDynamique) REFERENCES MediaDynamique(ID_mediaDynamique);
-ALTER TABLE Video ADD CONSTRAINT FK_Video_ID_Media FOREIGN KEY (ID_Media) REFERENCES Media(ID_Media);
-ALTER TABLE Video ADD CONSTRAINT FK_Video_ID_publication FOREIGN KEY (ID_publication) REFERENCES Publication(ID_publication);
-ALTER TABLE Image ADD CONSTRAINT FK_Image_ID_mediaStatique FOREIGN KEY (ID_mediaStatique) REFERENCES mediaStatique(ID_mediaStatique);
-ALTER TABLE Image ADD CONSTRAINT FK_Image_ID_Media FOREIGN KEY (ID_Media) REFERENCES Media(ID_Media);
-ALTER TABLE Image ADD CONSTRAINT FK_Image_ID_publication FOREIGN KEY (ID_publication) REFERENCES Publication(ID_publication);
-ALTER TABLE Mail ADD CONSTRAINT FK_Mail_ID_User FOREIGN KEY (ID_User) REFERENCES Utilisateur(ID_User);
-ALTER TABLE Commentaire ADD CONSTRAINT FK_Commentaire_ID_publication FOREIGN KEY (ID_publication) REFERENCES Publication(ID_publication);
-ALTER TABLE Alerte ADD CONSTRAINT FK_Alerte_ID_publication FOREIGN KEY (ID_publication) REFERENCES Publication(ID_publication);
-ALTER TABLE Administrateur ADD CONSTRAINT FK_Administrateur_ID_User FOREIGN KEY (ID_User) REFERENCES Utilisateur(ID_User);
-ALTER TABLE Vote ADD CONSTRAINT FK_Vote_ID_publication FOREIGN KEY (ID_publication) REFERENCES Publication(ID_publication);
-ALTER TABLE Vote ADD CONSTRAINT FK_Vote_ID_Tag FOREIGN KEY (ID_Tag) REFERENCES Tag(ID_Tag);
-
-CREATE TABLE users (
-        uid INT Auto_increment NOT NULL,
-        login Varchar(255),
-        password Varchar(60) NOT NULL, 
-        PRIMARY KEY (uid)
-);
-
-INSERT INTO users(login,password) VALUES ('root','root'),('safia','safia'),('safinette','safinette');
+ALTER TABLE publication ADD CONSTRAINT FK_publication_ID_user FOREIGN KEY (ID_user) REFERENCES utilisateur(ID_user) ON DELETE CASCADE;
+ALTER TABLE media ADD CONSTRAINT FK_media_ID_publication FOREIGN KEY (ID_publication) REFERENCES publication(ID_publication) ON DELETE CASCADE;
+ALTER TABLE mediaDynamique ADD CONSTRAINT FK_mediaDynamique_ID_media FOREIGN KEY (ID_media) REFERENCES media(ID_media) ON DELETE CASCADE;
+ALTER TABLE mediaDynamique ADD CONSTRAINT FK_mediaDynamique_ID_publication FOREIGN KEY (ID_publication) REFERENCES publication(ID_publication) ON DELETE CASCADE;
+ALTER TABLE mediaStatique ADD CONSTRAINT FK_mediaStatique_ID_media FOREIGN KEY (ID_media) REFERENCES media(ID_media) ON DELETE CASCADE;
+ALTER TABLE mediaStatique ADD CONSTRAINT FK_mediaStatique_ID_publication FOREIGN KEY (ID_publication) REFERENCES publication(ID_publication) ON DELETE CASCADE;
+ALTER TABLE audio ADD CONSTRAINT FK_audio_ID_mediaDynamique FOREIGN KEY (ID_mediaDynamique) REFERENCES mediaDynamique(ID_mediaDynamique) ON DELETE CASCADE;
+ALTER TABLE audio ADD CONSTRAINT FK_audio_ID_media FOREIGN KEY (ID_media) REFERENCES media(ID_media) ON DELETE CASCADE;
+ALTER TABLE audio ADD CONSTRAINT FK_audio_ID_publication FOREIGN KEY (ID_publication) REFERENCES publication(ID_publication) ON DELETE CASCADE;
+ALTER TABLE video ADD CONSTRAINT FK_video_ID_mediaDynamique FOREIGN KEY (ID_mediaDynamique) REFERENCES mediaDynamique(ID_mediaDynamique) ON DELETE CASCADE;
+ALTER TABLE video ADD CONSTRAINT FK_video_ID_media FOREIGN KEY (ID_media) REFERENCES media(ID_media) ON DELETE CASCADE;
+ALTER TABLE video ADD CONSTRAINT FK_video_ID_publication FOREIGN KEY (ID_publication) REFERENCES publication(ID_publication) ON DELETE CASCADE;
+ALTER TABLE image ADD CONSTRAINT FK_image_ID_mediaStatique FOREIGN KEY (ID_mediaStatique) REFERENCES mediaStatique(ID_mediaStatique) ON DELETE CASCADE;
+ALTER TABLE image ADD CONSTRAINT FK_image_ID_media FOREIGN KEY (ID_media) REFERENCES media(ID_media) ON DELETE CASCADE;
+ALTER TABLE image ADD CONSTRAINT FK_image_ID_publication FOREIGN KEY (ID_publication) REFERENCES publication(ID_publication) ON DELETE CASCADE;
+ALTER TABLE mail ADD CONSTRAINT FK_mail_ID_user FOREIGN KEY (ID_user) REFERENCES utilisateur(ID_user) ON DELETE CASCADE;
+ALTER TABLE commentaire ADD CONSTRAINT FK_commentaire_ID_publication FOREIGN KEY (ID_publication) REFERENCES publication(ID_publication) ON DELETE CASCADE;
+ALTER TABLE alerte ADD CONSTRAINT FK_alerte_ID_publication FOREIGN KEY (ID_publication) REFERENCES publication(ID_publication) ON DELETE CASCADE;
+ALTER TABLE administrateur ADD CONSTRAINT FK_administrateur_ID_user FOREIGN KEY (ID_user) REFERENCES utilisateur(ID_user) ON DELETE CASCADE;
+ALTER TABLE vote ADD CONSTRAINT FK_vote_ID_publication FOREIGN KEY (ID_publication) REFERENCES publication(ID_publication) ON DELETE CASCADE;
+ALTER TABLE vote ADD CONSTRAINT FK_vote_ID_tag FOREIGN KEY (ID_tag) REFERENCES Tag(ID_tag) ON DELETE CASCADE;

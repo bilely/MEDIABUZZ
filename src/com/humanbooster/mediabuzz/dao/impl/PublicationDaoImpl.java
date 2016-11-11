@@ -42,11 +42,10 @@ public class PublicationDaoImpl implements PublicationDaoInterface {
 			PreparedStatement ps = connection
 					.prepareStatement(Consts.CREATE_PUBLICATION_QUERY);
 			ps.setString(1, publication.getAuteur().getNom());
-			ps.setDate(2, UtilAndSqlDateManager.convertUtilDateToSqlDate(
+			ps.setTimestamp(2, UtilAndSqlDateManager.convertDateToSqlDateStamp(
 					publication.getDatePublication()));
 			ps.setString(3, publication.getTitre());
 			ps.setInt(4, publication.getAuteur().getId());
-			logger.info(publication.getDatePublication());
 			ps.execute();
 			isCreated = true;
 		} catch (SQLException e) {
@@ -67,7 +66,9 @@ public class PublicationDaoImpl implements PublicationDaoInterface {
 			ResultSet rs = ps.executeQuery();
 			if (rs.next()) {
 				Utilisateur temp = uDaoImpl.getUser(rs.getString(2));
-				publication = new Publication(id, temp, rs.getDate(3),
+				publication = new Publication(id, temp,
+						UtilAndSqlDateManager.convertSqlTimeStampToUtilDate(
+								rs.getTimestamp(3)),
 						rs.getString(4), rs.getInt(5));
 			}
 		} catch (SQLException e) {
@@ -80,7 +81,7 @@ public class PublicationDaoImpl implements PublicationDaoInterface {
 
 	@Override
 	public List<Publication> getAllPublication(Utilisateur utilisateur) {
-		
+
 		logger.info(utilisateur);
 		List<Publication> publications = new ArrayList<>();
 		try {
@@ -89,9 +90,10 @@ public class PublicationDaoImpl implements PublicationDaoInterface {
 			ps.setString(1, utilisateur.getNom());
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
-				Publication publication = new Publication(
-						rs.getInt(1), utilisateur, UtilAndSqlDateManager
-								.convertSqlDateToUtilDate(rs.getDate(3)),
+				Publication publication = new Publication(rs.getInt(1),
+						utilisateur,
+						UtilAndSqlDateManager.convertSqlTimeStampToUtilDate(
+								rs.getTimestamp(3)),
 						rs.getString(4), rs.getInt(5));
 				publications.add(publication);
 			}
@@ -115,8 +117,9 @@ public class PublicationDaoImpl implements PublicationDaoInterface {
 
 				Publication publication = i.next();
 				ps.setString(1, publication.getAuteur().getNom());
-				ps.setDate(2, UtilAndSqlDateManager.convertUtilDateToSqlDate(
-						publication.getDatePublication()));
+				ps.setTimestamp(2,
+						UtilAndSqlDateManager.convertDateToSqlDateStamp(
+								publication.getDatePublication()));
 				ps.setString(3, publication.getTitre());
 				ps.setInt(4, publication.getAuteur().getId());
 				ps.executeUpdate();
@@ -150,15 +153,15 @@ public class PublicationDaoImpl implements PublicationDaoInterface {
 	@Override
 	public int nbPublication(Utilisateur utilisateur) {
 		int nbPublication = -1;
-		try{
-			PreparedStatement ps = connection.prepareStatement(
-								Consts.COUNT_PUBLICATION_TO_QUERY);
+		try {
+			PreparedStatement ps = connection
+					.prepareStatement(Consts.COUNT_PUBLICATION_TO_QUERY);
 			ps.setInt(1, utilisateur.getId());
 			ResultSet rs = ps.executeQuery();
-			if(rs.next()){
-				nbPublication =  rs.getInt(1);
+			if (rs.next()) {
+				nbPublication = rs.getInt(1);
 			}
-		}catch(SQLException e){
+		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		return nbPublication;
@@ -174,6 +177,8 @@ public class PublicationDaoImpl implements PublicationDaoInterface {
 					.prepareStatement(Consts.DELETE_ONE_PUBLICATION_QUERY);
 			ps.setInt(1, id);
 			ps.execute();
+			Statement stmt = connection.createStatement();
+			stmt.execute(Consts.RESET_AUTO_INCREMENT_PUBLICATION_QUERY);
 			isDeleted = true;
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -197,7 +202,5 @@ public class PublicationDaoImpl implements PublicationDaoInterface {
 		}
 		return areDeleted;
 	}
-
-
 
 }
