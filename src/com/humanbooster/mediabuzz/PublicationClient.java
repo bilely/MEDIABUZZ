@@ -73,7 +73,6 @@ public class PublicationClient {
 			Thread.sleep(5000);
 			// Autre façon de faire un thread, pas moyen de faire un sysout en
 			// même temps à cause du systeme dejà utilisé.
-			// int i=5;
 			// long start=System.currentTimeMillis();
 			// while((System.currentTimeMillis()-start)<5000);
 			System.out.print("...ok!\n");

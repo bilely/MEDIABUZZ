@@ -229,3 +229,5 @@ INFO - Utilisateur [id=1, nom=test, mail=mail@, motDePasse=motDePasseRandom, dat
 INFO - Utilisateur [id=1, nom=test, mail=mail@, motDePasse=motDePasseRandom, dateInscription=Fri Nov 11 12:19:58 CET 2016, compteActif=true]
 INFO - Utilisateur [id=1, nom=test, mail=mail@, motDePasse=motDePasseRandom, dateInscription=Fri Nov 11 12:20:58 CET 2016, compteActif=true]
 INFO - Utilisateur [id=1, nom=test, mail=mail@, motDePasse=motDePasseRandom, dateInscription=Fri Nov 11 12:20:58 CET 2016, compteActif=true]
+INFO - Utilisateur [id=1, nom=test, mail=mail@, motDePasse=motDePasseRandom, dateInscription=Sat Nov 12 11:35:37 CET 2016, compteActif=true]
+INFO - Utilisateur [id=1, nom=test, mail=mail@, motDePasse=motDePasseRandom, dateInscription=Sat Nov 12 11:35:37 CET 2016, compteActif=true]

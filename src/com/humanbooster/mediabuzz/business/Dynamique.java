@@ -8,9 +8,9 @@ public abstract class Dynamique extends Media{
 	private static final int DUREE_MAX = 10;
 	private Time duree;
 
-	public Dynamique(Utilisateur auteur, Date datePublication, String titre,
-			Time duree) {
-		super(auteur, datePublication, titre);
+	public Dynamique(int id, Utilisateur auteur, String titre, int idAuteur,
+			String description, int nbVue, List<Tag> tags, Time duree) {
+		super(id, auteur, titre, idAuteur, description, nbVue, tags);
 		this.duree = duree;
 	}
 

@@ -1,6 +1,8 @@
 package com.humanbooster.mediabuzz.business;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Publication {
 	private int id;
@@ -68,12 +70,11 @@ public class Publication {
 	public void setIdAuteur(int idAuteur) {
 		this.idAuteur = idAuteur;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "Publication [id=" + id + ", auteur=" + auteur
 				+ ", datePublication=" + datePublication + ", titre=" + titre
 				+ ", idAuteur=" + idAuteur + "]";
 	}
-
 }

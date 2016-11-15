@@ -4,12 +4,15 @@ import java.util.Date;
 
 public class Commentaire extends Publication {
 	
-	public Commentaire(Utilisateur auteur, Date datePublication, String titre) {
-		super(auteur, datePublication, titre);
-	}
-
 	private String contenu;
 	private Publication publication;
+	
+	public Commentaire(int id, Utilisateur auteur, String titre, int idAuteur,
+			String contenu, Publication publication) {
+		super(id, auteur, titre, idAuteur);
+		this.contenu = contenu;
+		this.publication = publication;
+	}
 
 	public String getContenu() {
 		return contenu;
