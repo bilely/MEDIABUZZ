@@ -16,7 +16,7 @@ import com.humanbooster.mediabuzz.business.Publication;
 import com.humanbooster.mediabuzz.business.Utilisateur;
 import com.humanbooster.mediabuzz.dao.PublicationDaoInterface;
 import com.humanbooster.mediabuzz.utils.Consts;
-import com.humanbooster.mediabuzz.utils.UtilAndSqlDateManager;
+import com.humanbooster.mediabuzz.utils.DateManager;
 
 public class PublicationDaoImpl implements PublicationDaoInterface {
 
@@ -42,7 +42,7 @@ public class PublicationDaoImpl implements PublicationDaoInterface {
 			PreparedStatement ps = connection
 					.prepareStatement(Consts.CREATE_PUBLICATION_QUERY);
 			ps.setString(1, publication.getAuteur().getNom());
-			ps.setTimestamp(2, UtilAndSqlDateManager.convertDateToSqlDateStamp(
+			ps.setTimestamp(2, DateManager.convertDateToSqlDateStamp(
 					publication.getDatePublication()));
 			ps.setString(3, publication.getTitre());
 			ps.setInt(4, publication.getAuteur().getId());
@@ -67,7 +67,7 @@ public class PublicationDaoImpl implements PublicationDaoInterface {
 			if (rs.next()) {
 				Utilisateur temp = uDaoImpl.getUser(rs.getString(2));
 				publication = new Publication(id, temp,
-						UtilAndSqlDateManager.convertSqlTimeStampToUtilDate(
+						DateManager.convertSqlTimeStampToUtilDate(
 								rs.getTimestamp(3)),
 						rs.getString(4), rs.getInt(5));
 			}
@@ -92,7 +92,7 @@ public class PublicationDaoImpl implements PublicationDaoInterface {
 			while (rs.next()) {
 				Publication publication = new Publication(rs.getInt(1),
 						utilisateur,
-						UtilAndSqlDateManager.convertSqlTimeStampToUtilDate(
+						DateManager.convertSqlTimeStampToUtilDate(
 								rs.getTimestamp(3)),
 						rs.getString(4), rs.getInt(5));
 				publications.add(publication);
@@ -118,7 +118,7 @@ public class PublicationDaoImpl implements PublicationDaoInterface {
 				Publication publication = i.next();
 				ps.setString(1, publication.getAuteur().getNom());
 				ps.setTimestamp(2,
-						UtilAndSqlDateManager.convertDateToSqlDateStamp(
+						DateManager.convertDateToSqlDateStamp(
 								publication.getDatePublication()));
 				ps.setString(3, publication.getTitre());
 				ps.setInt(4, publication.getAuteur().getId());

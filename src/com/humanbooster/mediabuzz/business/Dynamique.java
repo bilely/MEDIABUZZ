@@ -5,12 +5,12 @@ import java.util.Date;
 import java.util.List;
 
 public abstract class Dynamique extends Media{
-	private static final int DUREE_MAX = 10;
-	private Time duree;
 
-	public Dynamique(int id, Utilisateur auteur, String titre, int idAuteur,
-			String description, int nbVue, List<Tag> tags, Time duree) {
-		super(id, auteur, titre, idAuteur, description, nbVue, tags);
+	private Time duree;
+	
+	public Dynamique(int id, Utilisateur auteur, Date datePublication,
+			String titre, int idAuteur, Time duree) {
+		super(id, auteur, datePublication, titre, idAuteur);
 		this.duree = duree;
 	}
 
@@ -20,10 +20,6 @@ public abstract class Dynamique extends Media{
 
 	public void setDuree(Time duree) {
 		this.duree = duree;
-	}
-
-	public static int getDureeMax() {
-		return DUREE_MAX;
 	}
 
 	@Override

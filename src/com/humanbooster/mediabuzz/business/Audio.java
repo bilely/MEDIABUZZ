@@ -6,8 +6,9 @@ import java.util.List;
 
 public class Audio extends Dynamique{
 
-	public Audio(int id, Utilisateur auteur, String titre, int idAuteur,
-			String description, int nbVue, List<Tag> tags, Time duree) {
-		super(id, auteur, titre, idAuteur, description, nbVue, tags, duree);
-	}
+	public Audio(int id, Utilisateur auteur, Date datePublication, String titre,
+			int idAuteur, Time duree) {
+		super(id, auteur, datePublication, titre, idAuteur, duree);
+		// TODO Auto-generated constructor stub
+	}	
 }

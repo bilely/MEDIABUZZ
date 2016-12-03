@@ -43,9 +43,9 @@ CREATE TABLE publication(
 CREATE TABLE media(
         ID_media       int (11) Auto_increment  NOT NULL ,
         description    Varchar (25) NOT NULL ,
-        tailleMax      Int NOT NULL ,
-        nbMaxTag       Int NOT NULL ,
         nbVue          Int NOT NULL ,
+        taille		   Int NOT NULL	,
+        adresse		   Varchar(255) ,
         ID_publication Int NOT NULL ,
         PRIMARY KEY (ID_media ,ID_publication )
 )ENGINE=InnoDB;
@@ -58,7 +58,6 @@ CREATE TABLE media(
 CREATE TABLE mediaDynamique(
         ID_mediaDynamique int (11) Auto_increment  NOT NULL ,
         duree             Time NOT NULL ,
-        dureeMax          Time NOT NULL ,
         ID_media          Int NOT NULL ,
         ID_publication    Int NOT NULL ,
         PRIMARY KEY (ID_mediaDynamique ,ID_media ,ID_publication )
@@ -71,7 +70,6 @@ CREATE TABLE mediaDynamique(
 
 CREATE TABLE mediaStatique(
         ID_mediaStatique int (11) Auto_increment  NOT NULL ,
-        tailleMax        Int ,
         ID_media         Int NOT NULL ,
         ID_publication   Int NOT NULL ,
         PRIMARY KEY (ID_mediaStatique ,ID_media ,ID_publication )

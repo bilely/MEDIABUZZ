@@ -11,22 +11,20 @@ import org.apache.log4j.PropertyConfigurator;
 import com.humanbooster.mediabuzz.business.Utilisateur;
 import com.humanbooster.mediabuzz.dao.UtilisateurDao;
 import com.humanbooster.mediabuzz.utils.Consts;
-import com.humanbooster.mediabuzz.utils.UtilAndSqlDateManager;
+import com.humanbooster.mediabuzz.utils.DateManager;
 
 public class UtilisateurDaoImpl implements UtilisateurDao {
 
 	private Connection connection;
 
-	// ----------------------------- Constructeur
-	// ---------------------------------------
+	// ----------------------------- Constructeur----------------------------
 	public UtilisateurDaoImpl(Connection connection) {
 		this.connection = connection;
 		String log4jConfPath = Consts.LOG4J_CONF_PATH;
 		PropertyConfigurator.configure(log4jConfPath);
 	}
 
-	// ----------------------------- Méthode createUser
-	// ---------------------------------
+	// -------------------------- Méthode createUser----------------------------
 	@Override
 	public boolean createUser(Utilisateur u) {
 		boolean isCreated = false;
@@ -36,7 +34,7 @@ public class UtilisateurDaoImpl implements UtilisateurDao {
 			ps.setString(1, u.getNom());
 			ps.setString(2, u.getMail());
 			ps.setString(3, u.getMotDePasse());
-			ps.setDate(4, UtilAndSqlDateManager
+			ps.setDate(4, DateManager
 					.convertUtilDateToSqlDate(u.getDateInscription()));
 			ps.setBoolean(5, u.isCompteActif());
 			ps.execute();
@@ -47,8 +45,7 @@ public class UtilisateurDaoImpl implements UtilisateurDao {
 		return isCreated;
 	}
 
-	// ----------------------------- Méthode getUser
-	// ---------------------------------
+	// ------------------------ Méthode getUser -----------------------------
 	@Override
 	public Utilisateur getUser(String nom) {
 		Utilisateur user = null;
@@ -58,8 +55,9 @@ public class UtilisateurDaoImpl implements UtilisateurDao {
 			ps.setString(1, nom);
 			ResultSet rs = ps.executeQuery();
 			if (rs.next()) {
+				//TODO ne pas utiliser des numero mais des noms de champs
 				user = new Utilisateur(rs.getInt(1),rs.getString(2), rs.getString(3),
-						UtilAndSqlDateManager.convertSqlDateToUtilDate(rs.getDate(4)), rs.getString(5), rs.getBoolean(6));
+						DateManager.convertSqlDateToUtilDate(rs.getDate(4)), rs.getString(5), rs.getBoolean(6));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -67,32 +65,28 @@ public class UtilisateurDaoImpl implements UtilisateurDao {
 		return user;
 	}
 
-	// ----------------------------- Méthode updateUser
-	// ---------------------------------
+	// ----------------------- Méthode updateUser---------------------------
 	@Override
 	public boolean updateUser() {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	// ----------------------------- Méthode addUser
-	// ---------------------------------
+	// ------------------------ Méthode addUser-----------------------------
 	@Override
 	public Utilisateur addUser() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	// ----------------------------- Méthode deleteUser
-	// ---------------------------------
+	// ---------------------- Méthode deleteUser-----------------------------
 	@Override
 	public boolean deleteUser() {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	// ----------------------------- Méthode deleteAllUser
-	// ---------------------------------
+	// -------------------- Méthode deleteAllUser-------------------------
 	@Override
 	public boolean deleteAllUser() {
 		boolean areDeleted = false;

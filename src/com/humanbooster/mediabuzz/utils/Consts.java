@@ -4,6 +4,13 @@ public final class Consts {
 	
 	public static final String LOG4J_CONF_PATH = "C:\\Formation\\Java\\workspace\\MEDIABUZZ\\resources\\log4j.properties";
 	
+	//Constante numerique	
+	private static final int TAILLE_TELEVERSEMET_MAX = 10;//TODO
+	private static final int NB_MAX_TAG = 5;//TODO
+	
+	private static final int TAILLE_MAX_IMG= 2;//TODO
+	private static final int DUREE_MAX = 10;//TODO
+	
 	//Utilisateur
 	public static final String CREATE_USER_QUERY = "INSERT INTO utilisateur (nom, mail, mdp, dateInscription, compteActif) VALUES (?,?,?,?,?)";
 	

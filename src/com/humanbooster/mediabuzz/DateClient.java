@@ -2,16 +2,16 @@ package com.humanbooster.mediabuzz;
 
 import java.util.Calendar;
 
-import com.humanbooster.mediabuzz.utils.UtilAndSqlDateManager;
+import com.humanbooster.mediabuzz.utils.DateManager;
 
-public class UtilAndSqlDateClient {
+public class DateClient {
 
 	public static void main(String[] args) {
 		java.util.Date utilDate = new java.util.Date();
 		System.out.println("------TEST convertion utilDate To Sql Date-------");
 		
 		System.out.println(" utilDate : "+utilDate);
-		System.out.println(" sqlDate après convertion utilDate : "+UtilAndSqlDateManager.convertUtilDateToSqlDate(utilDate));
+		System.out.println(" sqlDate après convertion utilDate : "+DateManager.convertUtilDateToSqlDate(utilDate));
 		
 		System.out.println("------TEST convertion sqlDate To utilDate-------");
 		Calendar c = Calendar.getInstance();
@@ -21,7 +21,7 @@ public class UtilAndSqlDateClient {
 		System.out.println(" sqlDate : "+sqlDate);
 		
 		System.out.println(" utilDate après convertion sqlDate "
-				+UtilAndSqlDateManager.convertSqlDateToUtilDate(sqlDate));
+				+DateManager.convertSqlDateToUtilDate(sqlDate));
 		
 		
 
