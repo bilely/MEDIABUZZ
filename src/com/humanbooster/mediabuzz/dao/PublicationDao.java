@@ -5,7 +5,7 @@ import java.util.List;
 import com.humanbooster.mediabuzz.business.Publication;
 import com.humanbooster.mediabuzz.business.Utilisateur;
 
-public interface PublicationDaoInterface {
+public interface PublicationDao {
 	public boolean createPublication(Publication publication);
 	public List<Publication> getAllPublication(Utilisateur utilisateur);
 	public boolean insertAllPublication(List<Publication> publications);

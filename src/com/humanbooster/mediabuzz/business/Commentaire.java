@@ -6,10 +6,20 @@ public class Commentaire extends Publication {
 	
 	private String contenu;
 	private Publication publication;
-	
-	public Commentaire(int id, Utilisateur auteur, String titre, int idAuteur,
-			String contenu, Publication publication) {
-		super(id, auteur, titre, idAuteur);
+
+	/**
+	 * @param idPublication
+	 * @param auteur
+	 * @param datePublication
+	 * @param titre
+	 * @param idAuteur
+	 * @param contenu
+	 * @param publication
+	 */
+	public Commentaire(int idPublication, Utilisateur auteur,
+			Date datePublication, String titre, int idAuteur, String contenu,
+			Publication publication) {
+		super(idPublication, auteur, datePublication, titre, idAuteur);
 		this.contenu = contenu;
 		this.publication = publication;
 	}

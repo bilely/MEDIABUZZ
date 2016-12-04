@@ -5,38 +5,35 @@ import java.util.Date;
 import java.util.List;
 
 public class Publication {
-	private int id;
+	private int idPublication;
 	private Utilisateur auteur;
 	private Date datePublication;
 	private String titre;
 	private int idAuteur;
 	
-	// ------------------------------------ Constructeurs -------------------------------------
-
-	public Publication(int id, Utilisateur auteur, String titre, int idAuteur) {
-		this.id = id;
-		this.auteur = auteur;
-		this.datePublication = new Date();
-		this.titre = titre;
-		this.idAuteur = idAuteur;
-	}
-	
-	public Publication(int id, Utilisateur auteur, Date datePublication, String titre, int idAuteur) {
-		this.id = id;
+	/**
+	 * @param idPublication
+	 * @param auteur
+	 * @param datePublication
+	 * @param titre
+	 * @param idAuteur
+	 */
+	public Publication(int idPublication, Utilisateur auteur,
+			Date datePublication, String titre, int idAuteur) {
+		super();
+		this.idPublication = idPublication;
 		this.auteur = auteur;
 		this.datePublication = datePublication;
 		this.titre = titre;
 		this.idAuteur = idAuteur;
 	}
-	
-	// ------------------------------------ Getters et Setters -------------------------------------
 
-	public int getId() {
-		return id;
+	public int getIdPublication() {
+		return idPublication;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setIdPublication(int idPublication) {
+		this.idPublication = idPublication;
 	}
 
 	public Utilisateur getAuteur() {
@@ -66,15 +63,16 @@ public class Publication {
 	public int getIdAuteur() {
 		return idAuteur;
 	}
-	
+
 	public void setIdAuteur(int idAuteur) {
 		this.idAuteur = idAuteur;
 	}
 
 	@Override
 	public String toString() {
-		return "Publication [id=" + id + ", auteur=" + auteur
-				+ ", datePublication=" + datePublication + ", titre=" + titre
-				+ ", idAuteur=" + idAuteur + "]";
+		return "Publication [idPublication=" + idPublication + ", auteur="
+				+ auteur + ", datePublication=" + datePublication + ", titre="
+				+ titre + ", idAuteur=" + idAuteur + "]";
 	}
+	
 }

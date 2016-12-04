@@ -14,11 +14,11 @@ import org.apache.log4j.PropertyConfigurator;
 
 import com.humanbooster.mediabuzz.business.Publication;
 import com.humanbooster.mediabuzz.business.Utilisateur;
-import com.humanbooster.mediabuzz.dao.PublicationDaoInterface;
+import com.humanbooster.mediabuzz.dao.PublicationDao;
 import com.humanbooster.mediabuzz.utils.Consts;
 import com.humanbooster.mediabuzz.utils.DateManager;
 
-public class PublicationDaoImpl implements PublicationDaoInterface {
+public class PublicationDaoImpl implements PublicationDao {
 
 	private Connection connection;
 	private static Logger logger = Logger.getLogger(PublicationDaoImpl.class);
@@ -139,7 +139,7 @@ public class PublicationDaoImpl implements PublicationDaoInterface {
 		try {
 			PreparedStatement ps = connection
 					.prepareStatement(Consts.UPDATE_PUBLICATION_QUERY);
-			ps.setInt(1, publication.getId());
+			ps.setInt(1, publication.getIdPublication());
 			ps.executeUpdate();
 			isUpdated = true;
 		} catch (SQLException e) {

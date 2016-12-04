@@ -28,9 +28,9 @@ public class PublicationClient {
 			Utilisateur u2 = new Utilisateur(2, "test2", "mail2@",
 					"motDePasseRandom2");
 			UtilisateurDaoImpl uDaoImpl = new UtilisateurDaoImpl(connection);
-			Publication pub = new Publication(1, u, "PremièreProduction", 1);
-			Publication pub2 = new Publication(2, u, "DeuxièmeProduction", 1);
-			Publication pub3 = new Publication(3, u2, "TroisièmeProduction", 2);
+			Publication pub = new Publication(1, u, null, "PremièreProduction", 1);
+			Publication pub2 = new Publication(2, u, null, "DeuxièmeProduction", 1);
+			Publication pub3 = new Publication(3, u2, null, "TroisièmeProduction", 2);
 			PublicationDaoImpl pDaoImpl = new PublicationDaoImpl(connection);
 
 			System.out.println("----------TEST Connection---------");
