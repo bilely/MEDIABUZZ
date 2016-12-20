@@ -17,36 +17,13 @@ import com.humanbooster.mediabuzz.utils.DateManager;
 
 public class AudioDaoImpl implements AudioDao {
 
-	private Connection connection;
-	private static Logger logger = Logger.getLogger(AudioDaoImpl.class);
-	private UtilisateurDaoImpl uDaoImpl;
-	private PublicationDaoImpl pubDaoImpl;
-	private AudioDaoImpl aDaoImpl;
 	
-	public AudioDaoImpl(Connection connection) {
-		this.connection = connection;
-		String log4jConfPath = Consts.LOG4J_CONF_PATH;
-		PropertyConfigurator.configure(log4jConfPath);
-		uDaoImpl = new UtilisateurDaoImpl(connection);
-		pubDaoImpl = new PublicationDaoImpl(connection);
-		aDaoImpl = new AudioDaoImpl(connection);
-	}
+	private static Logger logger = Logger.getLogger(AudioDaoImpl.class);
+
 	@Override
 	public boolean createAudio(Audio audio) {
-		boolean isCreated = false;
-		try {
-			
-			PreparedStatement ps4 = connection.prepareStatement(Consts.CREATE_AUDIO_QUERY);
-			ps4.setInt(1, audio.getIdDynamique());
-			ps4.setInt(2, audio.getIdMedia());
-			ps4.setInt(3, audio.getIdPublication());
-			ps4.execute();
-			isCreated = true;
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return isCreated;
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 	@Override
@@ -96,5 +73,6 @@ public class AudioDaoImpl implements AudioDao {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
+	
+	
 }

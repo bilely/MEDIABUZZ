@@ -62,4 +62,6 @@ public class ImageDaoImpl implements ImageDao {
 		return false;
 	}
 
+	
+
 }

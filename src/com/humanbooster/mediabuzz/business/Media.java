@@ -13,6 +13,7 @@ public abstract class Media extends Publication{
 	private List<Tag> tags = new ArrayList<>();
 	private int taille;
 	private String adresse;
+	
 	/**
 	 * @param idPublication
 	 * @param auteur
